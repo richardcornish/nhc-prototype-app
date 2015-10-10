@@ -31,7 +31,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="{% block signup_active %}{% endblock %}"><a href="{% url "/signup.html" %}">Sign up</a></li>
+            {% block navbar_nav %}
+            {% endblock %}
         </div><!--/.navbar-collapse -->          
       </div>
     </div>

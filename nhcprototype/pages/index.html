@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block navbar_nav %}
+<li class=""><a href="{% url "/signup.html" %}">Sign up</a></li>
+{% endblock %}
+
 {% block body %}
 
 <div class="container">
@@ -17,7 +21,8 @@
           <label for="exampleInputPassword1" class="sr-only">Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
-        <button type="submit" class="btn btn-success btn-lg btn-block">Log in</button>
+        <a href="{% url '/dashboard.html' %}" class="btn btn-success btn-lg btn-block">Log in</a>
+        {# <button type="submit" class="btn btn-success btn-lg btn-block">Log in</button> #}
       </form>
     </div>
   </div>

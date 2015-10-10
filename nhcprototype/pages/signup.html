@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
-{% block signup_active %}active{% endblock %}
+{% block navbar_nav %}
+<li class="active"><a href="{% url "/signup.html" %}">Sign up</a></li>
+{% endblock %}
 
 {% block body %}
 
