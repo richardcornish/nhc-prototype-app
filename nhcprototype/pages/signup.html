@@ -1,22 +1,18 @@
-{% extends "base.html" %}
-
-{% block navbar_nav %}
-<li class="active"><a href="{% url "/signup.html" %}">Sign up</a></li>
-{% endblock %}
+{% extends "logged_out.html" %}
 
 {% block body %}
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3">
-      <div class="page-header">
-        <h1 class="text-center">Sign up</h1>
-      </div>
-      <p class="text-center">Please contact Next Health Choice to sign up for an account.</p>
-      <p class="text-center">(844) 629-8766</p>
-      <p class="text-center">info@nexthealthchoice.com</p>
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <div class="page-header">
+                <h1 class="text-center">Sign up</h1>
+            </div>
+            <p class="text-center">Please contact Next Health Choice to sign up for an account.</p>
+            <p class="text-center"><a href="tel:+18446298766" class="btn btn-default">(844) 629-8766</a></p>
+            <p class="text-center"><a href="mailto:info@nexthealthchoice.com" class="btn btn-default">info@nexthealthchoice.com</a></p>
+        </div>
     </div>
-  </div>
 </div>
 
 {% endblock %}

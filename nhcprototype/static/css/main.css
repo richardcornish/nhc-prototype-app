@@ -7,3 +7,39 @@
 
 
 
+section {
+    margin: 0 0 2rem;
+}
+.table {
+    margin-top: 1rem;
+}
+.table tbody .btn {
+    margin: -5px;
+    text-align: left;
+    padding: 5px;
+}
+.table tbody tr {
+    cursor: pointer;
+}
+.table tbody tr:hover {
+    background-color: rgba(0,0,0,.05);
+}
+h1, .h1 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+h2, .h2 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+h5, .h5 {
+    margin-bottom: .5rem;
+}
+
+.btn-space {
+    margin-bottom: 2rem;
+}
+.pager {
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}

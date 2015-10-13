@@ -1,0 +1,49 @@
+{% extends "logged_in.html" %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Patients</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <section>
+                <form>
+                    <label for="patient-search" class="sr-only">Patient search</label>
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Search for a patient" id="patient-search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-11">
+
+            <h2>A</h2>
+
+        </div>
+        <div class="col-md-1">
+            <div class="btn-group-vertical btn-group-lg" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">A</button>
+                <button type="button" class="btn btn-default">B</button>
+                <button type="button" class="btn btn-default">C</button>
+                <button type="button" class="btn btn-default">D</button>
+                <button type="button" class="btn btn-default">E</button>
+                <button type="button" class="btn btn-default">F</button>
+                <button type="button" class="btn btn-default">G</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
