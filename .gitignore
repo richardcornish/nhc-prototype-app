@@ -1,6 +1,10 @@
 # Apple
 *.DS_Store
 
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
 # Cactus
 .build
 .deploy
