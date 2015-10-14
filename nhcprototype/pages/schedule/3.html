@@ -1,0 +1,33 @@
+{% extends "schedule/wizard.html" %}
+
+{% block wizard_nav %}
+<li><a href="{% url '/schedule/1.html' %}">Patient info</a></li>
+<li><a href="{% url '/schedule/2.html' %}">Insurance info</a></li>
+<li><a href="{% url '/schedule/3.html' %}" class="active">RQI</a></li>
+<li><a href="{% url '/schedule/4.html' %}">Preauthorization</a></li>
+<li><a href="{% url '/schedule/5.html' %}">Schedule</a></li>
+{% endblock %}
+
+{% block wizard_title %}
+RQI
+{% endblock %}
+
+{% block wizard_form %}
+<section>
+    <form>
+        <div class="row">
+            <div class="col-sm-6">
+                <p>?</p>
+            </div>
+        </div>
+    </form>
+</section>
+<section>
+    <nav>
+        <ul class="pager">
+            <li class="previous"><a href="{% url '/schedule/2.html' %}"><span aria-hidden="true">&larr;</span> Insurance info</a></li>
+            <li class="next"><a href="{% url '/schedule/4.html' %}">Preauthorization <span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+    </nav>
+</section>
+{% endblock %}

@@ -4,8 +4,30 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-8 col-sm-push-3">
+        <div class="col-sm-3">
+            <p><img src="{% static '/static/images/default.png' %}" class="img-responsive img-circle center-block" style="width: 60%; margin-bottom: 2rem"></p>
+        </div>
+        <div class="col-sm-9">
             <h1>Don Draper</h1>
+            <p><a class="btn btn-default btn-sm btn-success btn-space" href="{% url '/schedule/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Schedule appointment</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <section>
+                <h2><small>Email address</small></h2>
+                <p><a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a></p>
+            </section>
+            <section>
+                <h2><small>Date of birth</small></h2>
+                <p>6/1/1926</p>
+            </section>
+            <section>
+                <h2><small>Phone</small></h2>
+                <p>(212) KL5-0112</p>
+            </section>
+        </div>
+        <div class="col-sm-9">
             <section>
                 <h2><small>Appointments</small></h2>
                 <table class="table table-condensed table-responsive">
@@ -49,22 +71,6 @@
                       </tr>
                   </tbody>
                 </table>
-            </section>
-        </div>
-        <div class="col-sm-3 col-sm-pull-8">
-            <p><img src="{% static '/static/images/default.png' %}" class="img-responsive img-circle center-block" style="width: 60%; margin-bottom: 2rem"></p>
-            <p class="text-center"><a class="btn btn-default btn-success btn-space" href="{% url '/schedule.html' %}"><span class="glyphicon glyphicon-plus"></span> Schedule appointment</a></p>
-            <section>
-                <h2><small>Email address</small></h2>
-                <p><a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a></p>
-            </section>
-            <section>
-                <h2><small>Date of birth</small></h2>
-                <p>6/1/1926</p>
-            </section>
-            <section>
-                <h2><small>Phone</small></h2>
-                <p>(212) KL5-0112</p>
             </section>
         </div>
     </div>

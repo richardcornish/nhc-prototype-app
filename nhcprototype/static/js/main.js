@@ -9,9 +9,17 @@
     });
 
     // Format date widgets
-    $('[data-widget="date"]').datetimepicker({
+    $('[data-widget="date-dob"]').datetimepicker({
         format: 'MM/DD/YYYY',
         viewMode: 'years'
+    });
+    $('[data-widget="date-schedule"]').each(function(){
+        $(this).datetimepicker({
+            stepping: 15,
+            sideBySide: true,
+            minDate: new Date(),
+            enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+        });
     });
 
 })(jQuery);
@@ -20,6 +28,8 @@
 (function($, FieldKit){
 
     // Format phone inputs
-    new FieldKit.TextField($('[data-widget="phone"]').get(0), new FieldKit.PhoneFormatter());
+    if ($('[data-widget="phone"]').length) {
+        new FieldKit.TextField($('[data-widget="phone"]').get(0), new FieldKit.PhoneFormatter());
+    }
 
 })(jQuery, FieldKit);
