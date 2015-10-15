@@ -1,0 +1,32 @@
+{% extends "logged_in.html" %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Create appointment</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <section>
+                <ul class="nav-nhc nav nav-pills nav-stacked">
+                    {% block wizard_nav %}
+                    {% endblock %}
+                </ul>
+            </section>
+        </div>
+        {% block wizard_form_outer %}
+        <div class="col-md-6">
+            <section>
+                <h2><small>{% block wizard_title %}{% endblock %}</small></h2>
+                {% block wizard_form %}
+                {% endblock %}
+            </section>
+        </div>
+        {% endblock %}
+    </div>
+</div>
+
+{% endblock %}

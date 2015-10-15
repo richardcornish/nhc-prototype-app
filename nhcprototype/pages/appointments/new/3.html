@@ -1,33 +1,28 @@
-{% extends "schedule/wizard.html" %}
+{% extends "appointments/new/wizard.html" %}
 
 {% block wizard_nav %}
-<li><a href="{% url '/schedule/1.html' %}">Patient info</a></li>
-<li><a href="{% url '/schedule/2.html' %}" class="active">Insurance info</a></li>
-<li><a href="{% url '/schedule/3.html' %}">RQI</a></li>
-<li><a href="{% url '/schedule/4.html' %}">Preauthorization</a></li>
-<li><a href="{% url '/schedule/5.html' %}">Dates</a></li>
-{% endblock %}
-
-{% block wizard_title %}
-Insurance info
+<li><a href="{% url '/appointments/new/1.html' %}">Patient</a></li>
+<li><a href="{% url '/appointments/new/2.html' %}">Procedure</a></li>
+<li><a href="{% url '/appointments/new/3.html' %}" class="active">Insurance</a></li>
+<li><a href="{% url '/appointments/new/4.html' %}">RQI</a></li>
+<li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
+<li><a href="{% url '/appointments/new/6.html' %}">Dates</a></li>
 {% endblock %}
 
 {% block wizard_form %}
-<section>
-    <form>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label for="carrier">Carrier</label>
-                    <input type="text" class="form-control" id="carrier" placeholder="">
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="form-group">
-                    <label for="card-number">Card Number</label>
-                    <input type="text" class="form-control" id="card-number" placeholder="">
-                </div>
-            </div>
+
+<form action="">
+    <section>
+        <div class="form-group">
+            <label for="card-number">Patient card number</label>
+            <input type="text" class="form-control" id="card-number" placeholder="">
+        </div>
+    </section>
+    <section>
+        <h2><small>Carrier contact info</small></h2>
+        <div class="form-group">
+            <label for="carrier">Carrier name</label>
+            <input type="text" class="form-control" id="carrier" placeholder="">
         </div>
         <div class="row">
             <div class="col-sm-6">
@@ -38,7 +33,7 @@ Insurance info
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="phone">Email address</label>
+                    <label for="phone">Email</label>
                     <input type="email" class="form-control" id="email" placeholder="">
                 </div>
             </div>
@@ -114,14 +109,17 @@ Insurance info
                 </div>
             </div>
         </div>
-    </form>
-</section>
-<section>
-    <nav>
-        <ul class="pager">
-            <li class="previous"><a href="{% url '/schedule/1.html' %}"><span aria-hidden="true">&larr;</span> Patient info</a></li>
-            <li class="next"><a href="{% url '/schedule/3.html' %}">RQI <span aria-hidden="true">&rarr;</span></a></li>
-        </ul>
-    </nav>
-</section>
+    </section>
+
+    <section>
+        <nav>
+            <ul class="pager">
+                <li class="previous"><a href="{% url '/appointments/new/2.html' %}"><span aria-hidden="true">&larr;</span> Procedure</a></li>
+                <li class="next"><a href="{% url '/appointments/new/4.html' %}">RQI <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        </nav>
+    </section>
+
+</form>
+
 {% endblock %}

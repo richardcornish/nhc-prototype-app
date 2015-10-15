@@ -1,20 +1,17 @@
-{% extends "schedule/wizard.html" %}
+{% extends "appointments/new/wizard.html" %}
 
 {% block wizard_nav %}
-<li><a href="{% url '/schedule/1.html' %}" class="active">Patient info</a></li>
-<li><a href="{% url '/schedule/2.html' %}">Insurance info</a></li>
-<li><a href="{% url '/schedule/3.html' %}">RQI</a></li>
-<li><a href="{% url '/schedule/4.html' %}">Preauthorization</a></li>
-<li><a href="{% url '/schedule/5.html' %}">Dates</a></li>
-{% endblock %}
-
-{% block wizard_title %}
-Patient information
+<li><a href="{% url '/appointments/new/1.html' %}" class="active">Patient</a></li>
+<li><a href="{% url '/appointments/new/2.html' %}">Procedure</a></li>
+<li><a href="{% url '/appointments/new/3.html' %}">Insurance</a></li>
+<li><a href="{% url '/appointments/new/4.html' %}">RQI</a></li>
+<li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
+<li><a href="{% url '/appointments/new/6.html' %}">Dates</a></li>
 {% endblock %}
 
 {% block wizard_form %}
-<section>
-    <form>
+<form action="">
+    <section>
         <div class="row">
             <div class="col-sm-8">
                 <div class="form-group">
@@ -44,13 +41,13 @@ Patient information
                 </div>
             </div>
         </div>
-    </form>
-</section>
-<section>
-    <nav>
-        <ul class="pager">
-            <li class="next"><a href="{% url '/schedule/2.html' %}">Insurance info <span aria-hidden="true">&rarr;</span></a></li>
-        </ul>
-    </nav>
-</section>
+    </section>
+    <section>
+        <nav>
+            <ul class="pager">
+                <li class="next"><a href="{% url '/appointments/new/2.html' %}">Procedure <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        </nav>
+    </section>
+</form>
 {% endblock %}

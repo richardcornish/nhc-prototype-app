@@ -4,19 +4,136 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
+
             <h1>Settings</h1>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-
-            <section>
-                <p>Settings will go here</p>
-            </section>
+            <form action="">
+                <section>
+                    <h2><small>Practice details</small></h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="npi">NPI</label>
+                                <input type="text" class="form-control" id="npi" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2><small>Contact info</small></h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555" data-widget="phone">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2><small>Mailing address</small></h2>
+                    <div class="form-group">
+                        <label for="address1">Address</label>
+                        <p><input type="text" class="form-control" id="address1" placeholder=""></p>
+                        <p><input type="text" class="form-control" id="address2" placeholder=""></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <select class="form-control" id="state">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL" selected>Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>           
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2><small>Other</small></h2>
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="concierge"> Concierge</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="rqi"> RQI</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="preauthorization"> Preauthorization</label>
+                    </div>
+                </section>
+                <section>
+                    <h2><small>&nbsp;</small></h2>
+                    <p class="pull-left"><a href="{% url '/dashboard.html' %}" class="btn btn-default btn-space">Cancel</a></p>
+                    <p class="pull-right"><a href="{% url '/settings.html' %}" class="btn btn-success btn-space">Save changes</a></p>
+                </section>
+            </form>
 
         </div>
     </div>

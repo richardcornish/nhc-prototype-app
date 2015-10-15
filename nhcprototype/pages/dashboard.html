@@ -3,63 +3,63 @@
 {% block body %}
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-8">
+    <div class="row">
+        <div class="col-md-8">
 
-        <section>
-            <form>
-                <label for="patient-search" class="sr-only">Patient search</label>
-                <div class="input-group input-group-lg">
-                    <input type="text" class="form-control" placeholder="Search for a patient" id="patient-search">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                    </span>
-                </div>
-            </form>
-        </section>
+            <section>
+                <form>
+                    <label for="patient-search" class="sr-only">Patient search</label>
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Search for a patient" id="patient-search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                </form>
+            </section>
 
-        <section>
-            <table class="table table-condensed table-responsive">
-              <thead>
-                  <tr>
-                      <th>Last name</th>
-                      <th>First name</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td><a href="{% url '/patients/don-draper.html' %}">Draper</a></td>
-                      <td>Don</td>
-                  </tr>
-                  <tr>
-                      <td><a href="{% url '/patients/don-draper.html' %}">Olson</a></td>
-                      <td>Peggy</td>
-                  </tr>
-                  <tr>
-                      <td><a href="{% url '/patients/don-draper.html' %}">Campbell</a></td>
-                      <td>Pete</td>
-                  </tr>
-                  <tr>
-                      <td><a href="{% url '/patients/don-draper.html' %}">Francis</a></td>
-                      <td>Betty</td>
-                  </tr>
-                  <tr>
-                      <td><a href="{% url '/patients/don-draper.html' %}">Harris</a></td>
-                      <td>Joan</td>
-                  </tr>
-                  <tr>
-                      <td><a href="{% url '/patients/don-draper.html' %}">Sterling</a></td>
-                      <td>Roger</td>
-                  </tr>
-              </tbody>
-            </table>
-        </section>
+            <section>
+                <table class="table table-condensed table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Last name</th>
+                            <th>First name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Draper</a></td>
+                            <td>Don</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Olson</a></td>
+                            <td>Peggy</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Campbell</a></td>
+                            <td>Pete</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Francis</a></td>
+                            <td>Betty</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Harris</a></td>
+                            <td>Joan</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Sterling</a></td>
+                            <td>Roger</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
+        </div>
+        <div class="col-md-4">
+
+        </div>
     </div>
-    <div class="col-md-4">
-        
-    </div>
-  </div>
 </div>
 
 {% endblock %}
