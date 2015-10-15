@@ -4,30 +4,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-2">
-            <img src="{% static '/static/images/patient.png' %}" class="img-responsive img-circle center-block img-avatar">
-        </div>
-        <div class="col-sm-10">
-            <h1>Don Draper</h1>
-            <p><a class="btn btn-success btn-sm btn-space btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm btn-space" href="{% url '/patients/don-draper/edit.html' %}">Edit patient</a></p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-8">
+            <h1>Naperville Imaging Center</h1>
             <section>
-                <h2><small>Date of birth</small></h2>
-                <p>6/1/1926</p>
+                <p><small>1888 Bay Scott Cir, Naperville, IL 60540<br>(630) 717-3700<br><a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
             </section>
             <section>
-                <h2><small>Phone</small></h2>
-                <p>(212) 555-0112</p>
+                <p><a class="btn btn-success btn-sm btn-space btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm btn-space" href="{% url '/providers/12345/edit.html' %}">Edit provider</a></p>
             </section>
-            <section>
-                <h2><small>Email address</small></h2>
-                <p><a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a></p>
-            </section>
-        </div>
-        <div class="col-sm-10">
             <section>
                 <h2><small>Appointments</small></h2>
                 <table class="table table-condensed table-responsive table-row-link">
@@ -88,6 +72,47 @@
                         <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
                     </ul>
                 </nav>
+            </section>
+        </div>
+        <div class="col-sm-4">
+            <section style="position: relative;">
+                <img src="{% static '/static/images/marker.png' %}" alt="Marker" style="position: absolute; top: 50%; margin-top: -20px; margin-left: -14px; left: 50%; width: 28px; height: 41px;">
+                <img src="{% static '/static/images/map.png' %}" class="img-responsive img-thumbnail img-avatar center-block" style="padding: 0; border: none; border-radius: 7px;">
+            </section>
+            <section>
+                <h2><small>Hours</small></h2>
+                <table class="table table-condensed table-responsive" style="font-size: 80%;">
+                  <tbody>
+                      <tr>
+                          <td>Sunday</td>
+                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                      </tr>
+                      <tr>
+                          <td>Monday</td>
+                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                      </tr>
+                      <tr>
+                          <td>Tuesday</td>
+                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                      </tr>
+                      <tr>
+                          <td>Wednesday</td>
+                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                      </tr>
+                      <tr>
+                          <td class="text-bold">Thursday</td>
+                          <td class="text-bold text-right">8:00 AM&#8211;6:00 PM</td>
+                      </tr>
+                      <tr>
+                          <td>Friday</td>
+                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                      </tr>
+                      <tr>
+                          <td>Saturday</td>
+                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                      </tr>
+                  </tbody>
+                </table>
             </section>
         </div>
     </div>

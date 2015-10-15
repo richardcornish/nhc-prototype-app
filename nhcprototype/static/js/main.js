@@ -1,7 +1,7 @@
 (function($){
 
     // Make table rows clickable
-    $('.table').on('click', 'tbody tr', function (e) {
+    $('.table-row-link').on('click', 'tbody tr', function (e) {
         if ($(e.target).is('a, input')) {
             return;
         }

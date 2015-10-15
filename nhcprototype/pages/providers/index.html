@@ -6,52 +6,53 @@
     <div class="row">
         <div class="col-md-9">
 
-            <h1>Providers <small><a href="#" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span> Add provider</a></small></h1>
+            <h1>Providers <small><a href="{% url '/providers/new/index.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Add provider</a></small></h1>
             <form action="">
                 <section>
                     <label for="provider-search" class="sr-only">Provider search</label>
                     <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="Search for a provider" id="provider-search">
+                        <input type="text" class="form-control" placeholder="Search for a provider" id="provider-search" autofocus="autofocus">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </span>
                     </div>
                 </section>
             </form>
+
             <nav>
                 <ul class="pagination pagination-sm">
-                    <li><a href="#">A</a></li>
-                    <li><a href="#">B</a></li>
-                    <li><a href="#">C</a></li>
-                    <li><a href="#">D</a></li>
-                    <li><a href="#">E</a></li>
-                    <li><a href="#">F</a></li>
-                    <li><a href="#">G</a></li>
-                    <li><a href="#">H</a></li>
-                    <li><a href="#">I</a></li>
-                    <li><a href="#">J</a></li>
-                    <li><a href="#">K</a></li>
-                    <li><a href="#">L</a></li>
-                    <li><a href="#">M</a></li>
-                    <li><a href="#">N</a></li>
-                    <li><a href="#">O</a></li>
-                    <li><a href="#">P</a></li>
-                    <li><a href="#">Q</a></li>
-                    <li><a href="#">R</a></li>
-                    <li><a href="#">S</a></li>
-                    <li><a href="#">T</a></li>
-                    <li><a href="#">U</a></li>
-                    <li><a href="#">V</a></li>
-                    <li><a href="#">W</a></li>
-                    <li><a href="#">X</a></li>
-                    <li><a href="#">Y</a></li>
-                    <li><a href="#">Z</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">A</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">B</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">C</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">D</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">E</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">F</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">G</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">H</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">I</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">J</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">K</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">L</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">M</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">N</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">O</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">P</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">Q</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">R</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">S</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">T</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">U</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">V</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">W</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">X</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">Y</a></li>
+                    <li><a href="{% url '/providers/12345/index.html' %}">Z</a></li>
                 </ul>
             </nav>
 
             <h2><small>Recently added</small></h2>
 
-            <table class="table table-condensed table-responsive">
+            <table class="table table-condensed table-responsive table-row-link">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -62,37 +63,37 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="#">Naperville Imaging Center</a></td>
+                        <td><a href="{% url '/providers/12345/index.html' %}">Naperville Imaging Center</a></td>
                         <td>(212) 555-0112</td>
                         <td>Naperville</td>
                         <td>1972557668</td>
                     </tr>
                     <tr>
-                        <td><a href="#">Upright MRI of Deerfield</a></td>
+                        <td><a href="{% url '/providers/12345/index.html' %}">Upright MRI of Deerfield</a></td>
                         <td>847-291-9321</td>
                         <td>Deerfield</td>
                         <td>1972541225</td>
                     </tr>
                     <tr>
-                        <td><a href="#">Imaging Centers of America, Inc. </a></td>
+                        <td><a href="{% url '/providers/12345/index.html' %}">Imaging Centers of America, Inc. </a></td>
                         <td>630-898-3333</td>
                         <td>Aurora</td>
                         <td>1952678468</td>
                     </tr>
                     <tr>
-                        <td><a href="#">Open MRI of Olympia Fields, LLC</a></td>
+                        <td><a href="{% url '/providers/12345/index.html' %}">Open MRI of Olympia Fields, LLC</a></td>
                         <td>708-481-9800</td>
                         <td>Olympia Fields</td>
                         <td>1922034313</td>
                     </tr>
                     <tr>
-                        <td><a href="#">Chicago Northside MRI</a></td>
+                        <td><a href="{% url '/providers/12345/index.html' %}">Chicago Northside MRI</a></td>
                         <td>7735252818</td>
                         <td>Chicago</td>
                         <td>1902956923</td>
                     </tr>
                     <tr>
-                        <td><a href="#">Midwest Imaging and Diagnostic Center, Inc.</a></td>
+                        <td><a href="{% url '/providers/12345/index.html' %}">Midwest Imaging and Diagnostic Center, Inc.</a></td>
                         <td>708-423-9982</td>
                         <td>Oak Lawn</td>
                         <td>1902844541</td>

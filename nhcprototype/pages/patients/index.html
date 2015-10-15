@@ -6,12 +6,12 @@
     <div class="row">
         <div class="col-md-9">
 
-            <h1>Patients <small><a href="#" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus"></span> Add patient</a></small></h1>
+            <h1>Patients <small><a href="{% url '/patients/new/index.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Add patient</a></small></h1>
             <form action="">
                 <section>
                     <label for="patient-search" class="sr-only">Patient search</label>
                     <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="Search for a patient" id="patient-search">
+                        <input type="text" class="form-control" placeholder="Search for a patient" id="patient-search" autofocus="autofocus">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </span>
@@ -51,7 +51,7 @@
 
             <h2><small>Recently added</small></h2>
 
-            <table class="table table-condensed table-responsive">
+            <table class="table table-condensed table-responsive table-row-link">
                 <thead>
                     <tr>
                         <th>Last name</th>

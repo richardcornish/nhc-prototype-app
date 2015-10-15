@@ -61,3 +61,13 @@ h1 .btn, .h1 .btn {
     top: -5px;
     left: 20px;
 }
+.btn-success-outline {
+    background-color: #fff;
+    color: #4cae4c;
+}
+.img-avatar {
+    margin-bottom: 2rem;
+}
+.text-bold {
+    font-weight: bold;
+}
