@@ -4,6 +4,11 @@
 
 <div class="container">
     <div class="row">
+        <div class="col-md-12">
+            <img src="{% static '/static/images/logo.png' %}" class="img-responsive logo" alt="Logo">
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="page-header">
                 <h1 class="text-center">Log in</h1>
@@ -19,12 +24,12 @@
             <section>
                 <form>
                     <div class="form-group form-group-lg">
-                        <label for="exampleInputEmail1" class="sr-only">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <label for="email" class="sr-only">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" autofocus="autofocus">
                     </div>
                     <div class="form-group form-group-lg">
-                        <label for="exampleInputPassword1" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
                     <p><a href="{% url '/dashboard.html' %}" class="btn btn-success btn-lg btn-block">Log in</a></p>
                 </form>

@@ -7,61 +7,63 @@
         <div class="col-sm-8">
             <h1>Naperville Imaging Center</h1>
             <section>
-                <p><small>1888 Bay Scott Cir, Naperville, IL 60540<br>(630) 717-3700<br><a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
+                <p><small>(630) 717-3700<br>1888 Bay Scott Cir, Naperville, IL 60540<br><a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
             </section>
             <section>
                 <p><a class="btn btn-success btn-sm btn-space btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm btn-space" href="{% url '/providers/12345/edit.html' %}">Edit provider</a></p>
             </section>
             <section>
                 <h2><small>Appointments</small></h2>
-                <table class="table table-condensed table-responsive table-row-link">
-                  <thead>
-                      <tr>
-                          <th class="text-right">Date</th>
-                          <th>Provider</th>
-                          <th>Procedure</th>
-                          <th>Status</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">10/14/2015</a></td>
-                          <td>Naperville Imaging Center</td>
-                          <td>X-Ray- Orthopedic</td>
-                          <td><span class="label label-default">Requested</span></td>
-                      </tr>
-                      <tr>
-                          <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">10/7/2015</a></td>
-                          <td>Upright MRI of Deerfield</td>
-                          <td>DEXA- Bone Density</td>
-                          <td><span class="label label-warning">Booked</span></td>
-                      </tr>
-                      <tr>
-                          <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/30/2015</a></td>
-                          <td>Imaging Centers of America, Inc.</td>
-                          <td>Mammogram- Diagnostic</td>
-                          <td><span class="label label-success">Confirmed</span></td>
-                      </tr>
-                      <tr>
-                          <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/23/2015</a></td>
-                          <td>Open MRI of Olympia Fields, LLC</td>
-                          <td>Mammogram- Screening</td>
-                          <td><span class="label label-info">Completed</span></td>
-                      </tr>
-                      <tr>
-                          <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/16/2015</a></td>
-                          <td>Chicago Northside MRI</td>
-                          <td>MRI- Orthopedic Without then With Contrast Medium</td>
-                          <td><span class="label label-primary">Rescheduled</span></td>
-                      </tr>
-                      <tr>
-                          <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/9/2015</a></td>
-                          <td>Midwest Imaging and Diagnostic Center, Inc.</td>
-                          <td>MRI- Orthopedic With Contrast Medium</td>
-                          <td><span class="label label-danger">Canceled</span></td>
-                      </tr>
-                  </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-row-link">
+                      <thead>
+                          <tr>
+                              <th class="text-right">Date</th>
+                              <th>Patient</th>
+                              <th>Procedure</th>
+                              <th>Status</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">10/14/2015</a></td>
+                              <td>Don Draper</td>
+                              <td>X-Ray- Orthopedic</td>
+                              <td><span class="label label-default">Requested</span></td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">10/7/2015</a></td>
+                              <td>Peggy Olson</td>
+                              <td>DEXA- Bone Density</td>
+                              <td><span class="label label-warning">Booked</span></td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/30/2015</a></td>
+                              <td>Pete Campbell</td>
+                              <td>Mammogram- Diagnostic</td>
+                              <td><span class="label label-success">Confirmed</span></td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/23/2015</a></td>
+                              <td>Betty Francis</td>
+                              <td>Mammogram- Screening</td>
+                              <td><span class="label label-info">Completed</span></td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/16/2015</a></td>
+                              <td>Joan Harris</td>
+                              <td>MRI- Orthopedic Without then With Contrast Medium</td>
+                              <td><span class="label label-primary">Rescheduled</span></td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/9/2015</a></td>
+                              <td>Roger Sterling</td>
+                              <td>MRI- Orthopedic With Contrast Medium</td>
+                              <td><span class="label label-danger">Canceled</span></td>
+                          </tr>
+                      </tbody>
+                    </table>
+                </div>
                 <nav class="text-right">
                     <ul class="pagination pagination-sm">
                         <li><a href="#">1</a></li>
@@ -80,39 +82,45 @@
                 <img src="{% static '/static/images/map.png' %}" class="img-responsive img-thumbnail img-avatar center-block" style="padding: 0; border: none; border-radius: 7px;">
             </section>
             <section>
-                <h2><small>Hours</small></h2>
-                <table class="table table-condensed table-responsive" style="font-size: 80%;">
-                  <tbody>
-                      <tr>
-                          <td>Sunday</td>
-                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
-                      </tr>
-                      <tr>
-                          <td>Monday</td>
-                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
-                      </tr>
-                      <tr>
-                          <td>Tuesday</td>
-                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
-                      </tr>
-                      <tr>
-                          <td>Wednesday</td>
-                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
-                      </tr>
-                      <tr>
-                          <td class="text-bold">Thursday</td>
-                          <td class="text-bold text-right">8:00 AM&#8211;6:00 PM</td>
-                      </tr>
-                      <tr>
-                          <td>Friday</td>
-                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
-                      </tr>
-                      <tr>
-                          <td>Saturday</td>
-                          <td class="text-right">8:00 AM&#8211;6:00 PM</td>
-                      </tr>
-                  </tbody>
-                </table>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2><small>Hours</small></h2>
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-small">
+                                <tbody>
+                                    <tr>
+                                        <td>Sunday</td>
+                                        <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monday</td>
+                                        <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuesday</td>
+                                        <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wednesday</td>
+                                        <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Thursday</strong></td>
+                                        <td class="text-right"><strong>8:00 AM&#8211;6:00 PM</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td class="text-right">8:00 AM&#8211;6:00 PM</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
