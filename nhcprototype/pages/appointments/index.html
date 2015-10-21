@@ -1,16 +1,8 @@
 {% extends "logged_in.html" %}
 
-{% block body %}
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-
-            <h1>Appointments <small><a href="{% url '/appointments/new/1.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Create appointment</a></small></h1>
-            <p>Appointments will go here</p>
-
-        </div>
-    </div>
-</div>
-
-{% endblock body %}
+{% block content %}
+<section>
+    <h1><small>Appointments <a href="{% url '/appointments/new/1.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Create appointment</a></small></h1>
+    <p>Appointments will go here</p>    
+</section>
+{% endblock %}

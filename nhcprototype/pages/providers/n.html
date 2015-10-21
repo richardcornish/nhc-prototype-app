@@ -1,80 +1,67 @@
 {% extends "logged_in.html" %}
 
-{% block body %}
+{% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
+<div class="row">
+    <div class="col-md-9">
 
-            <h1>Providers <small><a href="{% url '/providers/new/index.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Add provider</a></small></h1>
-            <form action="">
-                <section>
-                    <label for="provider-search" class="sr-only">Provider search</label>
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="Search for a provider" id="provider-search" autofocus="autofocus">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                        </span>
-                    </div>
-                </section>
-            </form>
+        <h1>Providers <small><a href="{% url '/providers/new/index.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Add provider</a></small></h1>
 
-            <nav>
-                <ul class="pagination pagination-sm">
-                    <li><a href="{% url '/providers/n.html' %}">A</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">B</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">C</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">D</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">E</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">F</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">G</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">H</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">I</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">J</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">K</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">L</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">M</a></li>
-                    <li class="active"><a href="{% url '/providers/n.html' %}">N</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">O</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">P</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">Q</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">R</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">S</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">T</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">U</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">V</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">W</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">X</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">Y</a></li>
-                    <li><a href="{% url '/providers/n.html' %}">Z</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul class="pagination pagination-sm">
+                <li><a href="{% url '/providers/n.html' %}">A</a></li>
+                <li><a href="{% url '/providers/n.html' %}">B</a></li>
+                <li><a href="{% url '/providers/n.html' %}">C</a></li>
+                <li><a href="{% url '/providers/n.html' %}">D</a></li>
+                <li><a href="{% url '/providers/n.html' %}">E</a></li>
+                <li><a href="{% url '/providers/n.html' %}">F</a></li>
+                <li><a href="{% url '/providers/n.html' %}">G</a></li>
+                <li><a href="{% url '/providers/n.html' %}">H</a></li>
+                <li><a href="{% url '/providers/n.html' %}">I</a></li>
+                <li><a href="{% url '/providers/n.html' %}">J</a></li>
+                <li><a href="{% url '/providers/n.html' %}">K</a></li>
+                <li><a href="{% url '/providers/n.html' %}">L</a></li>
+                <li><a href="{% url '/providers/n.html' %}">M</a></li>
+                <li class="active"><a href="{% url '/providers/n.html' %}">N</a></li>
+                <li><a href="{% url '/providers/n.html' %}">O</a></li>
+                <li><a href="{% url '/providers/n.html' %}">P</a></li>
+                <li><a href="{% url '/providers/n.html' %}">Q</a></li>
+                <li><a href="{% url '/providers/n.html' %}">R</a></li>
+                <li><a href="{% url '/providers/n.html' %}">S</a></li>
+                <li><a href="{% url '/providers/n.html' %}">T</a></li>
+                <li><a href="{% url '/providers/n.html' %}">U</a></li>
+                <li><a href="{% url '/providers/n.html' %}">V</a></li>
+                <li><a href="{% url '/providers/n.html' %}">W</a></li>
+                <li><a href="{% url '/providers/n.html' %}">X</a></li>
+                <li><a href="{% url '/providers/n.html' %}">Y</a></li>
+                <li><a href="{% url '/providers/n.html' %}">Z</a></li>
+            </ul>
+        </nav>
 
-            <h2><small>Recently added</small></h2>
+        <h2><small>Recently added</small></h2>
 
-            <div class="table-responsive">
-                <table class="table table-condensed table-row-link">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>City</th>
-                            <th>NPI</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="{% url '/providers/12345/index.html' %}">Naperville Imaging Center</a></td>
-                            <td>630-717-3700</td>
-                            <td>Naperville</td>
-                            <td>1972557668</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
+        <div class="table-responsive">
+            <table class="table table-condensed table-row-link">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>City</th>
+                        <th>NPI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="{% url '/providers/12345/index.html' %}">Naperville Imaging Center</a></td>
+                        <td>630-717-3700</td>
+                        <td>Naperville</td>
+                        <td>1972557668</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
     </div>
 </div>
 
-{% endblock body %}
+{% endblock %}

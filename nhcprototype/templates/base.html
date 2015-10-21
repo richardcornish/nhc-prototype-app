@@ -13,47 +13,21 @@
     <script src="{% static '/static/js/vendor/modernizr-2.6.2.js' %}"></script>
 </head>
 
-<body>
+<body class="{% block body_class %}{% endblock %}">
 
-    <div class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                {% block header %}
-                {% endblock %}
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    {% block nav %}
-                    {% endblock %}
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    {% block navbar_nav %}
-                    {% endblock %}
-                </ul>
-            </div>
-        </div>
-    </div>
+<header>
+    {% block header %}
+    {% endblock %}
+</header>
 
-{% block body %}
-{% endblock %}
+<main>
+    {% block body %}
+    {% endblock %}
+</main>
 
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <section>
-                    {% block footer %}
-                    <p class="text-center"><small>&copy; {% now "Y" %} <a href="{% url '/index.html' %}">Next Health Choice</a>.</small></p>
-                    {% endblock %}
-                </section>
-            </div>
-        </div>
-    </div>
+    {% block footer %}
+    {% endblock %}
 </footer>
 
 <script src="{% static '/static/js/vendor/jquery.min.js' %}"></script>

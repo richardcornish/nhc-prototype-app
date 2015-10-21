@@ -10,21 +10,17 @@
 {% endblock %}
 
 {% block wizard_form %}
-<section>
-    <form>
-        <div class="row">
-            <div class="col-sm-6">
-                <p>?</p>
-            </div>
-        </div>
-    </form>
-</section>
-<section>
-    <nav>
-        <ul class="pager">
-            <li class="previous"><a href="{% url '/appointments/new/4.html' %}"><span aria-hidden="true">&larr;</span> RQI</a></li>
-            <li class="next"><a href="{% url '/appointments/new/6.html' %}">Dates <span aria-hidden="true">&rarr;</span></a></li>
-        </ul>
-    </nav>
-</section>
+<form action="">
+    <section>
+        <p>?</p>
+    </section>
+    <section>
+        <nav>
+            <ul class="pager">
+                <li class="previous"><a href="{% url '/appointments/new/4.html' %}"><span aria-hidden="true">&larr;</span> RQI</a></li>
+                <li class="next"><a href="{% url '/appointments/new/6.html' %}">Dates <span aria-hidden="true">&rarr;</span></a></li>
+            </ul>
+        </nav>
+    </section>
+</form>
 {% endblock %}

@@ -10,68 +10,66 @@
 {% endblock %}
 
 {% block wizard_form %}
-    
-    <form action="">
-        <section>
-            <h2><small>Appointment needed in next</small></h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label class="btn btn-default btn-lg">
-                            <input type="radio" name="options" id="option1" autocomplete="off" checked="checked" autofocus="autofocus">&nbsp;&nbsp;24 hours
-                        </label>
-                        <label class="btn btn-default btn-lg">
-                            <input type="radio" name="options" id="option2" autocomplete="off">&nbsp;&nbsp;48 hours
-                        </label>
-                        <label class="btn btn-default btn-lg">
-                            <input type="radio" name="options" id="option3" autocomplete="off">&nbsp;&nbsp;72&ndash;144 hours
-                        </label>
+<form action="">
+    <section>
+        <h2><small>Appointment needed in next</small></h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="btn btn-default btn-lg">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked="checked" autofocus="autofocus">&nbsp;&nbsp;24 hours
+                    </label>
+                    <label class="btn btn-default btn-lg">
+                        <input type="radio" name="options" id="option2" autocomplete="off">&nbsp;&nbsp;48 hours
+                    </label>
+                    <label class="btn btn-default btn-lg">
+                        <input type="radio" name="options" id="option3" autocomplete="off">&nbsp;&nbsp;72&ndash;144 hours
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2><small>Preferred dates and times</small></h2>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="form-group">
+                    <label for="preference-1">Preference 1</label>
+                    <div class="input-group date" data-widget="date-schedule">
+                        <input type="text" class="form-control" id="preference-1" placeholder="">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="preference-2">Preference 2</label>
+                    <div class="input-group date" data-widget="date-schedule">
+                        <input type="text" class="form-control" id="preference-2" placeholder="">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="preference-3">Preference 3</label>
+                    <div class="input-group date" data-widget="date-schedule">
+                        <input type="text" class="form-control" id="preference-3" placeholder="">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
-            <h2><small>Preferred dates and times</small></h2>
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="form-group">
-                        <label for="preference-1">Preference 1</label>
-                        <div class="input-group date" data-widget="date-schedule">
-                            <input type="text" class="form-control" id="preference-1" placeholder="">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="preference-2">Preference 2</label>
-                        <div class="input-group date" data-widget="date-schedule">
-                            <input type="text" class="form-control" id="preference-2" placeholder="">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="preference-3">Preference 3</label>
-                        <div class="input-group date" data-widget="date-schedule">
-                            <input type="text" class="form-control" id="preference-3" placeholder="">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <p class="pull-right"><a href="{% url '/appointments/12345/index-success.html' %}" class="btn btn-success">Schedule appointment</a></p>
-            <nav>
-                <ul class="pager">
-                    <li class="previous"><a href="{% url '/appointments/new/5.html' %}"><span aria-hidden="true">&larr;</span> Preauthorization</a></li>
-                </ul>
-            </nav>
-        </section>
-    </form>
-
+        </div>
+    </section>
+    <section>
+        <p class="pull-right"><a href="{% url '/appointments/12345/index-success.html' %}" class="btn btn-success">Schedule appointment</a></p>
+        <nav>
+            <ul class="pager">
+                <li class="previous"><a href="{% url '/appointments/new/5.html' %}"><span aria-hidden="true">&larr;</span> Preauthorization</a></li>
+            </ul>
+        </nav>
+    </section>
+</form>
 {% endblock %}

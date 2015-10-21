@@ -1,58 +1,57 @@
 {% extends "logged_in.html" %}
 
-{% block body %}
+{% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6">
+<div class="row">
+    <div class="col-sm-6">
 
-            <h1>Add provider</h1>
-            <form action="">
-                <section>
-                    <div class="form-group">
-                        <label for="first-name">First name</label>
-                        <input type="text" class="form-control" id="first-name" placeholder="" autofocus="autofocus">
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last name</label>
-                        <input type="text" class="form-control" id="last-name" placeholder="">
-                    </div>
-                </section>
-                <section>
-                    <div class="form-group">
-                        <label for="date-of-birth">Date of birth</label>
-                        <div class="input-group date" data-widget="date-dob">
-                            <input type="text" class="form-control" id="date-of-birth" placeholder="mm/dd/yyyy">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555" data-widget="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="">
-                    </div>
-                </section>
-                <section>
-                    <div class="form-group">
-                        <label for="photo">Photo</label>
-                        <input type="file" id="photo">
-                    </div>
-                </section>
-                <section>
-                    <p class="pull-left"><a href="{% url '/patients/index.html' %}" class="btn btn-default btn-space">Cancel</a></p>
-                    <p class="pull-right"><a href="{% url '/patients/don-draper/index.html' %}" class="btn btn-success btn-space">Add patient</a></p>
-                </section>
-            </form>
+        <h1>Add provider</h1>
 
-        </div>
+        <form action="">
+            <section>
+                <div class="form-group">
+                    <label for="first-name">First name</label>
+                    <input type="text" class="form-control" id="first-name" placeholder="" autofocus="autofocus">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last name</label>
+                    <input type="text" class="form-control" id="last-name" placeholder="">
+                </div>
+            </section>
+            <section>
+                <div class="form-group">
+                    <label for="date-of-birth">Date of birth</label>
+                    <div class="input-group date" data-widget="date-dob">
+                        <input type="text" class="form-control" id="date-of-birth" placeholder="mm/dd/yyyy">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555" data-widget="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="">
+                </div>
+            </section>
+            <section>
+                <div class="form-group">
+                    <label for="photo">Photo</label>
+                    <input type="file" id="photo">
+                </div>
+            </section>
+            <section>
+                <p class="pull-left"><a href="{% url '/patients/index.html' %}" class="btn btn-default btn-space">Cancel</a></p>
+                <p class="pull-right"><a href="{% url '/patients/don-draper/index.html' %}" class="btn btn-success btn-space">Add patient</a></p>
+            </section>
+        </form>
+
     </div>
 </div>
 
-{% endblock body %}
+{% endblock %}

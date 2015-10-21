@@ -1,25 +1,14 @@
 {% extends "logged_in.html" %}
 
-{% block body %}
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>MRI</h1>
+        <h1>MRI</h1>
+        <div class="alert alert-success">
+            <p>The appointment has been created. <a href="{% url '/appointments/12345/index.html' %}" class="alert-link">Send a confirmation email to patient</a></p>
         </div>
+
     </div>
 </div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-
-            <div class="alert alert-success">
-                <p>The appointment has been created. <a href="{% url '/appointments/12345/index.html' %}" class="alert-link">Send a confirmation email to patient</a></p>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-{% endblock body %}
+{% endblock %}

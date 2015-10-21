@@ -32,7 +32,7 @@ footer {
 }
 h1 .btn, .h1 .btn {
     position: relative;
-    top: -5px;
+    top: -3px;
     left: 20px;
 }
 .btn-success-outline {
@@ -45,21 +45,47 @@ h1 .btn, .h1 .btn {
 .text-bold {
     font-weight: bold;
 }
-.logo {
+.logged_out .logo {
     margin: 5rem auto 0;
     width: 70px;
     display: block;
 }
+.navbar-brand {
+    height: auto;
+}
+.navbar-brand>img {
+     max-height: 30px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    margin-top: 7px;
+}
+@media (min-width: 768px) {
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: 0;
+    }
+}
 .block {
     display: block;
 }
-.input-group {
-    margin-bottom: 2rem;
-}
 .nav-tabs {
-    margin: 3rem 0 2rem;
+    margin: 0rem 0 2rem;
 }
-
+.navbar-form {
+    margin-left: -15px;
+    border: 0;
+}
+.navbar-left {
+    float: none !important;
+}
+.navbar-form .form-group {
+    display: block;
+}
+.navbar-form .form-control {
+    width: 100%;
+}
+.form-control:focus {
+    box-shadow: none;
+}
 
 /* Tables */
 

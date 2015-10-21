@@ -1,88 +1,77 @@
 {% extends "logged_in.html" %}
 
-{% block body %}
+{% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
+<div class="row">
+    <div class="col-md-9">
 
-            <h1>Patients</h1>
-            <form action="">
-                <section>
-                    <label for="patient-search" class="sr-only">Patient search</label>
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="Search for a patient" id="patient-search">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                        </span>
-                    </div>
-                </section>
-            </form>
-            <nav>
-                <ul class="pagination pagination-sm">
-                    <li><a href="{% url '/patients/d.html' %}">A</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">B</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">C</a></li>
-                    <li class="active"><a href="{% url '/patients/d.html' %}">D</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">E</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">F</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">G</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">H</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">I</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">J</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">K</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">L</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">M</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">N</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">O</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">P</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">Q</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">R</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">S</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">T</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">U</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">V</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">W</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">X</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">Y</a></li>
-                    <li><a href="{% url '/patients/d.html' %}">Z</a></li>
-                </ul>
-            </nav>
+        <h1>Patients</h1>
 
-            <h2><small>D</small></h2>
+        <nav>
+            <ul class="pagination pagination-sm">
+                <li><a href="{% url '/patients/d.html' %}">A</a></li>
+                <li><a href="{% url '/patients/d.html' %}">B</a></li>
+                <li><a href="{% url '/patients/d.html' %}">C</a></li>
+                <li class="active"><a href="{% url '/patients/d.html' %}">D</a></li>
+                <li><a href="{% url '/patients/d.html' %}">E</a></li>
+                <li><a href="{% url '/patients/d.html' %}">F</a></li>
+                <li><a href="{% url '/patients/d.html' %}">G</a></li>
+                <li><a href="{% url '/patients/d.html' %}">H</a></li>
+                <li><a href="{% url '/patients/d.html' %}">I</a></li>
+                <li><a href="{% url '/patients/d.html' %}">J</a></li>
+                <li><a href="{% url '/patients/d.html' %}">K</a></li>
+                <li><a href="{% url '/patients/d.html' %}">L</a></li>
+                <li><a href="{% url '/patients/d.html' %}">M</a></li>
+                <li><a href="{% url '/patients/d.html' %}">N</a></li>
+                <li><a href="{% url '/patients/d.html' %}">O</a></li>
+                <li><a href="{% url '/patients/d.html' %}">P</a></li>
+                <li><a href="{% url '/patients/d.html' %}">Q</a></li>
+                <li><a href="{% url '/patients/d.html' %}">R</a></li>
+                <li><a href="{% url '/patients/d.html' %}">S</a></li>
+                <li><a href="{% url '/patients/d.html' %}">T</a></li>
+                <li><a href="{% url '/patients/d.html' %}">U</a></li>
+                <li><a href="{% url '/patients/d.html' %}">V</a></li>
+                <li><a href="{% url '/patients/d.html' %}">W</a></li>
+                <li><a href="{% url '/patients/d.html' %}">X</a></li>
+                <li><a href="{% url '/patients/d.html' %}">Y</a></li>
+                <li><a href="{% url '/patients/d.html' %}">Z</a></li>
+            </ul>
+        </nav>
 
-            <div class="table-responsive">
-                <table class="table table-condensed table-row-link">
-                    <thead>
-                        <tr>
-                            <th>Last name</th>
-                            <th>First name</th>
-                            <th>Phone</th>
-                            <th>Date of birth</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="{% url '/patients/don-draper/index.html' %}">Draper</a></td>
-                            <td>Don</td>
-                            <td>(212) 555-0112</td>
-                            <td>6/1/1926</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <nav class="text-right">
-                <ul class="pagination pagination-sm">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
-                <ul class="pagination pagination-sm">
-                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                </ul>
-            </nav>
+        <h2><small>D</small></h2>
+
+        <div class="table-responsive">
+            <table class="table table-condensed table-row-link">
+                <thead>
+                    <tr>
+                        <th>Last name</th>
+                        <th>First name</th>
+                        <th>Phone</th>
+                        <th>Date of birth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="{% url '/patients/don-draper/index.html' %}">Draper</a></td>
+                        <td>Don</td>
+                        <td>(212) 555-0112</td>
+                        <td>6/1/1926</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+        <nav class="text-right">
+            <ul class="pagination pagination-sm">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+            </ul>
+            <ul class="pagination pagination-sm">
+                <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+            </ul>
+        </nav>
+
     </div>
 </div>
 
-{% endblock body %}
+{% endblock %}
