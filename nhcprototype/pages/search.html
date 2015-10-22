@@ -1,15 +1,174 @@
-{% extends "logged_out.html" %}
+{% extends "logged_in.html" %}
+
+{% block autofocus %}autofocus="autofocus"{% endblock %}
 
 {% block content %}
 
 <div class="row">
-    <div class="col-lg-6 col-lg-offset-3">
+    <div class="col-md-12">
 
-        <div class="page-header">
-            <h1 class="text-center">Search</h1>
-        </div>
+        <h1><small>Search</small></h1>
+
         <section>
-            <p>Search results here</p>
+            <h2><small>Appointments</small></h2>
+            <div class="table-responsive">
+                <table class="table table-condensed table-row-link">
+                    <thead>
+                        <tr>
+                            <th class="text-right">Date</th>
+                            <th>Patient</th>
+                            <th>Provider</th>
+                            <th>Procedure</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">10/14/2015</a></td>
+                            <td>Don Draper</td>
+                            <td>Naperville Imaging Center</td>
+                            <td>X-Ray- Orthopedic</td>
+                            <td><span class="label label-default">Requested</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">10/7/2015</a></td>
+                            <td>Peggy Olson</td>
+                            <td>Upright MRI of Deerfield</td>
+                            <td>DEXA- Bone Density</td>
+                            <td><span class="label label-warning">Booked</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/30/2015</a></td>
+                            <td>Pete Campbell</td>
+                            <td>Imaging Centers of America, Inc. </td>
+                            <td>Mammogram- Diagnostic</td>
+                            <td><span class="label label-success">Confirmed</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/23/2015</a></td>
+                            <td>Betty Francis</td>
+                            <td>Open MRI of Olympia Fields, LLC</td>
+                            <td>Mammogram- Screening</td>
+                            <td><span class="label label-info">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right"><a href="{% url '/appointments/12345/index.html' %}">9/16/2015</a></td>
+                            <td>Joan Harris</td>
+                            <td>Chicago Northside MRI</td>
+                            <td>MRI- Orthopedic Without then With Contrast Medium</td>
+                            <td><span class="label label-primary">Rescheduled</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2><small>Patients</small></h2>
+            <div class="table-responsive">
+                <table class="table table-condensed table-row-link">
+                    <thead>
+                        <tr>
+                            <th>Last name</th>
+                            <th>First name</th>
+                            <th>Phone</th>
+                            <th>Date of birth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Campbell</a></td>
+                            <td>Pete</td>
+                            <td>(212) 555-0112</td>
+                            <td>6/1/1926</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Draper</a></td>
+                            <td>Don</td>
+                            <td>(212) 555-0112</td>
+                            <td>6/1/1926</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Francis</a></td>
+                            <td>Betty</td>
+                            <td>(212) 555-0112</td>
+                            <td>6/1/1926</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Harris</a></td>
+                            <td>Joan</td>
+                            <td>(212) 555-0112</td>
+                            <td>6/1/1926</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Olson</a></td>
+                            <td>Peggy</td>
+                            <td>(212) 555-0112</td>
+                            <td>6/1/1926</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/patients/don-draper/index.html' %}">Sterling</a></td>
+                            <td>Roger</td>
+                            <td>(212) 555-0112</td>
+                            <td>6/1/1926</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2><small>Providers</small></h2>
+            <div class="table-responsive">
+                <table class="table table-condensed table-row-link">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>City</th>
+                            <th>NPI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="{% url '/providers/12345/index.html' %}">Naperville Imaging Center</a></td>
+                            <td>630-717-3700</td>
+                            <td>Naperville</td>
+                            <td>1972557668</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/providers/12345/index.html' %}">Upright MRI of Deerfield</a></td>
+                            <td>847-291-9321</td>
+                            <td>Deerfield</td>
+                            <td>1972541225</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/providers/12345/index.html' %}">Imaging Centers of America, Inc. </a></td>
+                            <td>630-898-3333</td>
+                            <td>Aurora</td>
+                            <td>1952678468</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/providers/12345/index.html' %}">Open MRI of Olympia Fields, LLC</a></td>
+                            <td>708-481-9800</td>
+                            <td>Olympia Fields</td>
+                            <td>1922034313</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/providers/12345/index.html' %}">Chicago Northside MRI</a></td>
+                            <td>7735252818</td>
+                            <td>Chicago</td>
+                            <td>1902956923</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/providers/12345/index.html' %}">Midwest Imaging and Diagnostic Center, Inc.</a></td>
+                            <td>708-423-9982</td>
+                            <td>Oak Lawn</td>
+                            <td>1902844541</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
     </div>

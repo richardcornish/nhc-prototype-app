@@ -3,35 +3,39 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
 
         <h1><small>Settings</small></h1>
 
-        <form action="">
-            <section>
-                <h2><small>Practice details</small></h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="" autofocus="autofocus">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="npi">NPI</label>
-                            <input type="text" class="form-control" id="npi" placeholder="">
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="{% url '/settings/practice.html' %}">Practice</a></li>
+            <li><a href="{% url '/settings/providers.html' %}">Providers</a></li>
+            <li><a href="{% url '/settings/account.html' %}">Account</a></li>
+            <li><a href="{% url '/settings/password.html' %}">Password</a></li>
+        </ul>
+
+        <form action="" method="post">
             <section>
                 <h2><small>Contact info</small></h2>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" value="Naperville Imaging Center" placeholder="" autofocus="autofocus">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="npi">NPI</label>
+                            <input type="text" class="form-control" id="npi" value="1972557668" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555" data-widget="phone">
+                            <input type="tel" class="form-control" id="phone" value="(630) 717-3700" placeholder="(555) 555-5555" data-widget="phone">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -46,14 +50,14 @@
                 <h2><small>Mailing address</small></h2>
                 <div class="form-group">
                     <label for="address1">Address</label>
-                    <p><input type="text" class="form-control" id="address1" placeholder=""></p>
+                    <p><input type="text" class="form-control" id="address1" value="1888 Bay Scott Circle" placeholder=""></p>
                     <p><input type="text" class="form-control" id="address2" placeholder=""></p>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="city">City</label>
-                            <input type="text" class="form-control" id="city" placeholder="">
+                            <input type="text" class="form-control" id="city" value="Naperville" placeholder="">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -131,7 +135,7 @@
             <section>
                 <h2><small>&nbsp;</small></h2>
                 <p class="pull-left"><a href="{% url '/dashboard.html' %}" class="btn btn-default btn-space">Cancel</a></p>
-                <p class="pull-right"><a href="{% url '/settings.html' %}" class="btn btn-success btn-space">Save changes</a></p>
+                <p class="pull-right"><a href="{% url '/settings/practice.html' %}" class="btn btn-success btn-space">Save changes</a></p>
             </section>
         </form>
 

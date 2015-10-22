@@ -3,26 +3,22 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-md-8">
 
         <nav>
-            <ul class="pager">
+            <ul class="pager pager-sm">
                 <li class="previous"><a href="{% url '/patients/don-draper/index.html' %}"><span aria-hidden="true">&larr;</span> Back to patient</a></li>
             </ul>
         </nav>
-        <h1>Edit patient</h1>
 
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-6">
+        <h1><small>Edit patient</small></h1>
 
         <ul class="nav nav-tabs">
             <li class="active"><a href="{% url '/patients/don-draper/edit/general.html' %}">General</a></li>
             <li><a href="{% url '/patients/don-draper/edit/insurance.html' %}">Insurance</a></li>
         </ul>
 
-        <form action="">
+        <form action="" method="post">
             <section>
                 <div class="form-group">
                     <label for="first-name">First name</label>

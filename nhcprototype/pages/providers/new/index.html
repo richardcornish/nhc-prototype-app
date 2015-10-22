@@ -3,11 +3,17 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-md-6">
 
-        <h1>Add provider</h1>
+        <nav>
+            <ul class="pager pager-sm">
+                <li class="previous"><a href="{% url '/providers/index.html' %}"><span aria-hidden="true">&larr;</span> Back to providers</a></li>
+            </ul>
+        </nav>
 
-        <form action="">
+        <h1><small>Add provider</small></h1>
+
+        <form action="" method="post">
             <section>
                 <div class="form-group">
                     <label for="first-name">First name</label>
@@ -46,8 +52,8 @@
                 </div>
             </section>
             <section>
-                <p class="pull-left"><a href="{% url '/patients/index.html' %}" class="btn btn-default btn-space">Cancel</a></p>
-                <p class="pull-right"><a href="{% url '/patients/don-draper/index.html' %}" class="btn btn-success btn-space">Add patient</a></p>
+                <p class="pull-left"><a href="{% url '/providers/index.html' %}" class="btn btn-default btn-space">Cancel</a></p>
+                <p class="pull-right"><a href="{% url '/providers/12345/index.html' %}" class="btn btn-success btn-space">Add provider</a></p>
             </section>
         </form>
 

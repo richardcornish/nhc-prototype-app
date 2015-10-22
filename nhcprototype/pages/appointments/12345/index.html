@@ -1,14 +1,67 @@
 {% extends "logged_in.html" %}
 
 {% block content %}
+
 <div class="row">
     <div class="col-md-12">
 
-        <h1>Appointment detail</h1>
+        <nav>
+            <ul class="pager pager-sm">
+                <li class="previous"><a href="{% url '/appointments/index.html' %}"><span aria-hidden="true">&larr;</span> Back to appointments</a></li>
+            </ul>
+        </nav>
+
+        <h1><small>CT Abdomen/Pelvis Together Without Contrast Medium</small></h1>
+
+        <p><span class="label label-default label-appointment">Requested</span></p>
+
+        <p><a class="btn btn-default btn-sm btn-space" href="{% url '/appointments/12345/edit/general.html' %}">Edit appointment</a></p>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+
+        <p>Date created</p>
+        <p>22 Oct 2015</p>
+        <p>Date modified</p>
+        <p>22 Oct 2015</p>
+        <p>Date scheduled</p>
+        <p>22 Oct 2015</p>
+        <p>3:00 PM</p>
+        <p>Body part</p>
+        <p>Abdomen</p>
+
         <section>
-            <p>Appointments will go here</p>
+            <h2><small>Procedure</small></h2>
+            <p>Imaging</p>
+            <p>60 minutes</p>
+        </section>
+
+        <section>
+            <h2><small>Patient</small></h2>
+            <p><a href="{% url '/patients/don-draper/index.html' %}">Don Draper</a></p>
+            <p>(212) 555-0112</p>
+            <p><a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a></p>
+            <p>6/1/1926</p>
+        </section>
+
+        <section>
+            <h2><small>Provider</small></h2>
+            <p><a href="{% url '/providers/12345/index.html' %}">Naperville Imaging Center</a></p>
+            <p>(630) 717-3700</p>
+            <p>1888 Bay Scott Cir, Naperville, IL 60540</p>
+            <p><a href="http://www.napervillemri.com/">napervillemri.com</a></p>
+        </section>
+
+        <section>
+            <h2><small>Requests</small></h2>
+            <p>10/29/2015 10:00 AM</p>
+            <p>10/30/2015 11:00 AM</p>
+            <p>10/31/2015 12:00 PM</p>
         </section>
 
     </div>
 </div>
+
 {% endblock %}

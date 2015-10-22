@@ -3,11 +3,17 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-md-6">
 
-        <h1>Add patient</h1>
+        <nav>
+            <ul class="pager pager-sm">
+                <li class="previous"><a href="{% url '/patients/index.html' %}"><span aria-hidden="true">&larr;</span> Back to patients</a></li>
+            </ul>
+        </nav>
 
-        <form action="">
+        <h1><small>Add patient</small></h1>
+
+        <form action="" method="post">
             <section>
                 <div class="form-group">
                     <label for="first-name">First name</label>

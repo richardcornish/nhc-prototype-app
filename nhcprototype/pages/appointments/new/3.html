@@ -6,19 +6,30 @@
 <li><a href="{% url '/appointments/new/3.html' %}" class="active">Insurance</a></li>
 <li><a href="{% url '/appointments/new/4.html' %}">RQI</a></li>
 <li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
-<li><a href="{% url '/appointments/new/6.html' %}">Dates</a></li>
+<li><a href="{% url '/appointments/new/6.html' %}">Provider</a></li>
 {% endblock %}
 
 {% block wizard_form %}
-<form action="">
+<form action="" method="post">
     <section>
-        <div class="form-group">
-            <label for="card-number">Patient card number</label>
-            <input type="text" class="form-control" id="card-number" placeholder="" autofocus="autofocus">
+        <h2><small>Card info</small></h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="card-number">Member ID number</label>
+                    <input type="text" class="form-control" id="card-number" value="1234567890" placeholder="" autofocus="autofocus">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="card-number">Group number</label>
+                    <input type="text" class="form-control" id="card-number" value="1234567890" placeholder="" autofocus="autofocus">
+                </div>
+            </div>
         </div>
     </section>
-    <section>
-        <h2><small>Carrier contact info</small></h2>
+    <section>        
+        <h2><small>Carrier info</small></h2>
         <div class="form-group">
             <label for="carrier">Carrier name</label>
             <input type="text" class="form-control" id="carrier" placeholder="">
@@ -112,7 +123,7 @@
 
     <section>
         <nav>
-            <ul class="pager">
+            <ul class="pager pager-sm">
                 <li class="previous"><a href="{% url '/appointments/new/2.html' %}"><span aria-hidden="true">&larr;</span> Procedure</a></li>
                 <li class="next"><a href="{% url '/appointments/new/4.html' %}">RQI <span aria-hidden="true">&rarr;</span></a></li>
             </ul>

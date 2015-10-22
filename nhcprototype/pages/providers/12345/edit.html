@@ -1,23 +1,18 @@
 {% extends "logged_in.html" %}
 
 {% block content %}
-
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-md-6">
 
         <nav>
-            <ul class="pager">
+            <ul class="pager pager-sm">
                 <li class="previous"><a href="{% url '/providers/12345/index.html' %}"><span aria-hidden="true">&larr;</span> Back to provider</a></li>
             </ul>
         </nav>
-        <h1>Edit provider</h1>
 
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-6">
+        <h1><small>Edit provider</small></h1>
 
-        <form action="">
+        <form action="" method="post">
             <section>
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -49,13 +44,13 @@
                     <p><input type="text" class="form-control" id="address2" placeholder=""></p>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="city">City</label>
                             <input type="text" class="form-control" id="city" value="Naperville" placeholder="">
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="state">State</label>
                             <select class="form-control" id="state">

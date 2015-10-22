@@ -3,9 +3,9 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-10">
 
-        <h1>Providers <small><a href="{% url '/providers/new/index.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Add provider</a></small></h1>
+        <h1><small>Providers <a href="{% url '/providers/new/index.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Add provider</a></small></h1>
 
         <nav>
             <ul class="pagination pagination-sm">
@@ -37,8 +37,6 @@
                 <li><a href="{% url '/providers/n.html' %}">Z</a></li>
             </ul>
         </nav>
-
-        <h2><small>Recently added</small></h2>
 
         <div class="table-responsive">
             <table class="table table-condensed table-row-link">

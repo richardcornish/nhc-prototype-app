@@ -1,0 +1,35 @@
+{% extends "logged_in.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+
+        <nav>
+            <ul class="pager pager-sm">
+                <li class="previous"><a href="{% url '/appointments/12345/index.html' %}"><span aria-hidden="true">&larr;</span> Back to appointment</a></li>
+            </ul>
+        </nav>
+
+        <h1><small>Edit appointment</small></h1>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="{% url '/appointments/12345/edit/general.html' %}">General</a></li>
+            <li><a href="{% url '/appointments/12345/edit/patient.html' %}">Patient</a></li>
+            <li><a href="{% url '/appointments/12345/edit/procedure.html' %}">Procedure</a></li>
+            <li><a href="{% url '/appointments/12345/edit/provider.html' %}">Provider</a></li>
+        </ul>
+
+        <form action="" method="post">
+            <section>
+                <p>Appointment data will go here.</p>
+            </section>
+            <section>
+                <p class="pull-left"><a href="{% url '/appointments/12345/index.html' %}" class="btn btn-default btn-space">Cancel</a></p>
+                <p class="pull-right"><a href="{% url '/appointments/12345/index.html' %}" class="btn btn-success btn-space">Save changes</a></p>
+            </section>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

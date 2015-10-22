@@ -6,19 +6,19 @@
 <li><a href="{% url '/appointments/new/3.html' %}">Insurance</a></li>
 <li><a href="{% url '/appointments/new/4.html' %}">RQI</a></li>
 <li><a href="{% url '/appointments/new/5.html' %}" class="active">Preauthorization</a></li>
-<li><a href="{% url '/appointments/new/6.html' %}">Dates</a></li>
+<li><a href="{% url '/appointments/new/6.html' %}">Provider</a></li>
 {% endblock %}
 
 {% block wizard_form %}
-<form action="">
+<form action="" method="post">
     <section>
         <p>?</p>
     </section>
     <section>
         <nav>
-            <ul class="pager">
+            <ul class="pager pager-sm">
                 <li class="previous"><a href="{% url '/appointments/new/4.html' %}"><span aria-hidden="true">&larr;</span> RQI</a></li>
-                <li class="next"><a href="{% url '/appointments/new/6.html' %}">Dates <span aria-hidden="true">&rarr;</span></a></li>
+                <li class="next"><a href="{% url '/appointments/new/6.html' %}">Provider <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
         </nav>
     </section>

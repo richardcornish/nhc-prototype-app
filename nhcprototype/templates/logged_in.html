@@ -19,11 +19,11 @@
             </div>
 
             <div class="navbar-collapse collapse">
-                <div class="col-sm-10">
+                <div class="col-sm-6">
                     <form class="navbar-form navbar-left" action="{% url '/search.html' %}">
                         <label for="query" class="sr-only">Query</label>
                         <div class="form-group">
-                            <input type="search" class="form-control" placeholder="Search appointments or patients..." id="query">
+                            <input type="search" class="form-control" placeholder="Search appointments or patients..." id="query" {% block autofocus %}{% endblock %}>
                             <button type="submit" class="btn btn-default sr-only">Search</button>
                         </div>
                         {% comment %}
@@ -34,6 +34,12 @@
                         </div>
                         {% endcomment %}
                     </form>
+                </div>
+                <div class="col-sm-4">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Appointment</a></li>
+                        <li><a href="{% url '/index.html' %}">Log out</a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -56,7 +62,7 @@
                     <li><a href="{% url '/appointments/index.html' %}">Appointments</a></li>
                     <li><a href="{% url '/patients/index.html' %}">Patients</a></li>
                     <li><a href="{% url '/providers/index.html' %}">Providers</a></li>
-                    <li><a href="{% url '/settings.html' %}">Settings</a></li>
+                    <li><a href="{% url '/settings/practice.html' %}">Settings</a></li>
                 </ul>
             </section>
         </div>
@@ -70,7 +76,7 @@
         <div class="col-md-12">
 
             <section>
-                <p><small>&copy; {% now "Y" %} <a href="{% url '/dashboard.html' %}">Next Health Choice</a>. <a href="{% url '/contact.html' %}">Contact</a>. <a href="{% url '/index.html' %}">Log out</a>. </small></p>
+                <p><small>&copy; {% now "Y" %} <a href="{% url '/dashboard.html' %}">Next Health Choice</a>. <a href="{% url '/support.html' %}">Support</a>. <a href="{% url '/index.html' %}">Log out</a>. </small></p>
             </section>
 
         </div>
