@@ -2,85 +2,26 @@
 
 {% block wizard_nav %}
 <li><a href="{% url '/appointments/new/1.html' %}">Patient</a></li>
-<li><a href="{% url '/appointments/new/2.html' %}">Procedure</a></li>
 <li><a href="{% url '/appointments/new/3.html' %}">Insurance</a></li>
-<li><a href="{% url '/appointments/new/4.html' %}">RQI</a></li>
-<li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
-<li><a href="{% url '/appointments/new/6.html' %}" class="active">Provider</a></li>
+<li><a href="{% url '/appointments/new/2.html' %}">Procedure</a></li>
+<li><a href="{% url '/appointments/new/6.html' %}">Provider</a></li>
+<li><a href="{% url '/appointments/new/5.html' %}" class="active">Preauthorization</a></li>
 {% endblock %}
 
 {% block wizard_form %}
 <form action="" method="post">
     <section>
-        <h2><small>Service provider</small></h2>
-        <div class="form-group">
-            <label for="provider" class="sr-only">Service provider</label>
-            <select id="provider" class="form-control">
-                <option value="1">Naperville Imaging Center</option>
-                <option value="2">Upright MRI of Deerfield</option>
-                <option value="3">Imaging Centers of America, Inc.</option>
-                <option value="4" disabled="disabled">Open MRI of Olympia Fields, LLC</option>
-                <option value="5" disabled="disabled">Chicago Northside MRI</option>
-                <option value="6" disabled="disabled">Midwest Imaging and Diagnostic Center, Inc.</option>
-            </select>
-            <p class="help-block"><small>To select a different provider, <a href="{% url '/settings/providers.html' %}">edit your preferred provider choices</a>.</small></p>
-        </div>
+        <p>Coming soon.</p>
     </section>
     <section>
-        <h2><small>Appointment needed in next</small></h2>
-        <div class="form-group">
-            <label class="btn btn-default btn-lg">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked="checked" autofocus="autofocus">&nbsp;&nbsp;24 hours
-            </label>
-            <label class="btn btn-default btn-lg">
-                <input type="radio" name="options" id="option2" autocomplete="off">&nbsp;&nbsp;48 hours
-            </label>
-            <label class="btn btn-default btn-lg">
-                <input type="radio" name="options" id="option3" autocomplete="off">&nbsp;&nbsp;72&ndash;144 hours
-            </label>
+        <div class="clearfix">
+            <p class="pull-right"><a href="{% url '/appointments/12345/index-success.html' %}" class="btn btn-success">Schedule appointment</a></p>
+            <nav>
+                <ul class="pager pager-sm">
+                    <li class="previous"><a href="{% url '/appointments/new/5.html' %}"><span class="glyphicon glyphicon-chevron-left"></span> Provider</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
-    <section>
-        <h2><small>Preferred dates and times</small></h2>
-        <div class="row">
-            <div class="col-md-9">
-                <div class="form-group">
-                    <label for="preference-1" class="sr-only">Preference 1</label>
-                    <div class="input-group input-group-lg date" data-widget="date-schedule">
-                        <input type="text" class="form-control" id="preference-1" placeholder="">
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="preference-2" class="sr-only">Preference 2</label>
-                    <div class="input-group input-group-lg date" data-widget="date-schedule">
-                        <input type="text" class="form-control" id="preference-2" placeholder="">
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="preference-3" class="sr-only">Preference 3</label>
-                    <div class="input-group input-group-lg date" data-widget="date-schedule">
-                        <input type="text" class="form-control" id="preference-3" placeholder="">
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <p class="pull-right"><a href="{% url '/appointments/12345/index-success.html' %}" class="btn btn-success">Schedule appointment</a></p>
-        <nav>
-            <ul class="pager pager-sm">
-                <li class="previous"><a href="{% url '/appointments/new/5.html' %}"><span aria-hidden="true">&larr;</span> Preauthorization</a></li>
-            </ul>
-        </nav>
     </section>
 </form>
 {% endblock %}

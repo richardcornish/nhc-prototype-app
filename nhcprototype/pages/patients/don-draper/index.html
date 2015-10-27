@@ -3,13 +3,16 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-md-9">
-
+    <div class="col-md-12">
+        
         <nav>
             <ul class="pager pager-sm">
-                <li class="previous"><a href="{% url '/patients/index.html' %}"><span aria-hidden="true">&larr;</span> Back to patients</a></li>
+                <li class="previous"><a href="{% url '/patients/index.html' %}"><span class="glyphicon glyphicon-chevron-left"></span> Back to patients</a></li>
             </ul>
         </nav>
+
+    </div>
+    <div class="col-sm-9">
 
         <h1><small>Don Draper</small></h1>
 
@@ -17,11 +20,11 @@
             <p><small>(212) 555-0112<br><a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a><br>6/1/1926</small></p>
         </section>
         <section>
-            <p><a class="btn btn-success btn-sm btn-space btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm btn-space" href="{% url '/patients/don-draper/edit/general.html' %}">Edit patient</a></p>
+            <p><a class="btn btn-success btn-sm btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm" href="{% url '/patients/don-draper/edit/general.html' %}">Edit patient</a></p>
         </section>
 
     </div>
-    <div class="col-md-2">
+    <div class="col-sm-2">
         
         <img src="{% static '/static/images/patient.png' %}" class="img-responsive img-circle center-block img-avatar">
 
@@ -36,7 +39,7 @@
                 <table class="table table-condensed table-row-link">
                     <thead>
                         <tr>
-                            <th class="text-right">Date</th>
+                            <th class="text-right">Scheduled for</th>
                             <th>Provider</th>
                             <th>Procedure</th>
                             <th>Status</th>
@@ -118,15 +121,24 @@
                     </tbody>
                 </table>
             </div>
-            <nav class="text-right">
-                <ul class="pagination pagination-sm">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
-                <ul class="pagination pagination-sm">
-                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                </ul>
+            <nav class="clearfix">
+                <div class="pull-left">
+                    <ul class="pager pager-sm">
+                        <li class="previous"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span> Previous</a></li>
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <ul class="pager pager-sm">
+                        <li class="next"><a href="#">Next <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <ul class="pagination pagination-sm">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div>
             </nav>
         </section>
 

@@ -7,60 +7,114 @@
 
         <nav>
             <ul class="pager pager-sm">
-                <li class="previous"><a href="{% url '/appointments/index.html' %}"><span aria-hidden="true">&larr;</span> Back to appointments</a></li>
+                <li class="previous"><a href="{% url '/appointments/index.html' %}"><span class="glyphicon glyphicon-chevron-left"></span> Back to appointments</a></li>
             </ul>
         </nav>
 
         <h1><small>CT Abdomen/Pelvis Together Without Contrast Medium</small></h1>
 
-        <p><span class="label label-default label-appointment">Requested</span></p>
-
-        <p><a class="btn btn-default btn-sm btn-space" href="{% url '/appointments/12345/edit/general.html' %}">Edit appointment</a></p>
+        <section>
+            <p><small>Imaging<br>60 minutes<br>Abdomen</small></p>
+        </section>
+        <section>
+            <p><span class="label label-default label-appointment">Requested</span> <a class="btn btn-default btn-sm" href="{% url '/appointments/12345/edit/general.html' %}">Edit appointment</a></p>
+        </section>
 
     </div>
 </div>
 <div class="row">
     <div class="col-md-8">
 
-        <p>Date created</p>
-        <p>22 Oct 2015</p>
-        <p>Date modified</p>
-        <p>22 Oct 2015</p>
-        <p>Date scheduled</p>
-        <p>22 Oct 2015</p>
-        <p>3:00 PM</p>
-        <p>Body part</p>
-        <p>Abdomen</p>
+        <h2><small>Requested dates</small></h2>
+        <div class="row">
+            <div class="col-md-4">
+                <section>
+                    <p><strong>10/29/2015, 10:00 AM</strong></p>
+                    <div class="btn-group btn-group-sm btn-group-justified">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">Decline</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success">Accept</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <section>
+                    <p><strong>10/29/2015, 10:00 AM</strong></p>
+                    <div class="btn-group btn-group-sm btn-group-justified">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">Decline</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success">Accept</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <section>
+                    <p><strong>10/29/2015, 10:00 AM</strong></p>
+                    <div class="btn-group btn-group-sm btn-group-justified">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default">Decline</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success">Accept</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
 
-        <section>
-            <h2><small>Procedure</small></h2>
-            <p>Imaging</p>
-            <p>60 minutes</p>
-        </section>
+        <div class="row">
+            <div class="col-md-6">
+                <h2><small>Patient</small></h2>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="{% url '/patients/don-draper/index.html' %}"><img src="{% static '/static/images/patient.png' %}" class="img-circle img-responsive" width="100" alt=""></a>
+                            </div>
+                            <div class="col-sm-8">
+                                <p><a href="{% url '/patients/don-draper/index.html' %}">Don Draper</a></p>
+                                <p><small>(212) 555-0112<br>
+                                <a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a><br>
+                                6/1/1926</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2><small>Provider</small></h2>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="{% url '/providers/12345/index.html' %}"><img src="{% static '/static/images/patient.png' %}" class="img-circle img-responsive" width="100" alt=""></a>
+                            </div>
+                            <div class="col-sm-8">
+                                <p><a href="{% url '/providers/12345/index.html' %}">Naperville Imaging Center</a></p>
+                                <p><small>(630) 717-3700<br>
+                                <a href="https://www.google.com/maps/?q=1888+Bay+Scott+Cir,+Naperville,+IL+60540">1888 Bay Scott Cir, Naperville, IL 60540</a><br>
+                                <a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <section>
-            <h2><small>Patient</small></h2>
-            <p><a href="{% url '/patients/don-draper/index.html' %}">Don Draper</a></p>
-            <p>(212) 555-0112</p>
-            <p><a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a></p>
-            <p>6/1/1926</p>
-        </section>
 
-        <section>
-            <h2><small>Provider</small></h2>
-            <p><a href="{% url '/providers/12345/index.html' %}">Naperville Imaging Center</a></p>
-            <p>(630) 717-3700</p>
-            <p>1888 Bay Scott Cir, Naperville, IL 60540</p>
-            <p><a href="http://www.napervillemri.com/">napervillemri.com</a></p>
-        </section>
-
-        <section>
-            <h2><small>Requests</small></h2>
-            <p>10/29/2015 10:00 AM</p>
-            <p>10/30/2015 11:00 AM</p>
-            <p>10/31/2015 12:00 PM</p>
-        </section>
-
+    </div>
+    <div class="col-md-2">
+        <h2><small>Details</small></h2>
+        <p>Date created<br>
+        10/21/1985</p>
+        <p>Date modified<br>
+        10/21/2015</p>
     </div>
 </div>
 

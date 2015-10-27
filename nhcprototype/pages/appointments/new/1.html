@@ -2,11 +2,10 @@
 
 {% block wizard_nav %}
 <li><a href="{% url '/appointments/new/1.html' %}" class="active">Patient</a></li>
-<li><a href="{% url '/appointments/new/2.html' %}">Procedure</a></li>
-<li><a href="{% url '/appointments/new/3.html' %}">Insurance</a></li>
-<li><a href="{% url '/appointments/new/4.html' %}">RQI</a></li>
+<li><a href="{% url '/appointments/new/2.html' %}">Insurance</a></li>
+<li><a href="{% url '/appointments/new/3.html' %}">Procedure</a></li>
+<li><a href="{% url '/appointments/new/4.html' %}">Provider</a></li>
 <li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
-<li><a href="{% url '/appointments/new/6.html' %}">Provider</a></li>
 {% endblock %}
 
 {% block wizard_form %}
@@ -45,7 +44,7 @@
     <section>
         <nav>
             <ul class="pager pager-sm">
-                <li class="next"><a href="{% url '/appointments/new/2.html' %}">Procedure <span aria-hidden="true">&rarr;</span></a></li>
+                <li class="next"><a href="{% url '/appointments/new/2.html' %}">Procedure <span class="glyphicon glyphicon-chevron-right"></span></a></li>
             </ul>
         </nav>
     </section>

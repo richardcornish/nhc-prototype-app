@@ -7,25 +7,26 @@
 
         <nav>
             <ul class="pager pager-sm">
-                <li class="previous"><a href="{% url '/providers/index.html' %}"><span aria-hidden="true">&larr;</span> Back to providers</a></li>
+                <li class="previous"><a href="{% url '/providers/index.html' %}"><span class="glyphicon glyphicon-chevron-left"></span> Back to providers</a></li>
             </ul>
         </nav>
 
         <h1><small>Naperville Imaging Center</small></h1>
 
         <section>
-            <p><small>(630) 717-3700<br>1888 Bay Scott Cir, Naperville, IL 60540<br><a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
+            <p><small>(630) 717-3700<br><a href="https://www.google.com/maps/?q=1888+Bay+Scott+Cir,+Naperville,+IL+60540">1888 Bay Scott Cir, Naperville, IL 60540</a><br><a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
         </section>
         <section>
-            <p><a class="btn btn-success btn-sm btn-space btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm btn-space" href="{% url '/providers/12345/edit.html' %}">Edit provider</a></p>
+            <p><a class="btn btn-success btn-sm btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm" href="{% url '/providers/12345/edit.html' %}">Edit provider</a></p>
         </section>
+
         <section>
             <h2><small>Appointments</small></h2>
             <div class="table-responsive">
                 <table class="table table-condensed table-row-link">
                     <thead>
                         <tr>
-                            <th class="text-right">Date</th>
+                            <th class="text-right">Scheduled for</th>
                             <th>Patient</th>
                             <th>Procedure</th>
                             <th>Status</th>
@@ -71,15 +72,24 @@
                     </tbody>
                 </table>
             </div>
-            <nav class="text-right">
-                <ul class="pagination pagination-sm">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                </ul>
-                <ul class="pagination pagination-sm">
-                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                </ul>
+            <nav class="clearfix">
+                <div class="pull-left">
+                    <ul class="pager pager-sm">
+                        <li class="previous"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span> Previous</a></li>
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <ul class="pager pager-sm">
+                        <li class="next"><a href="#">Next <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <ul class="pagination pagination-sm">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div>
             </nav>
         </section>
 
@@ -92,7 +102,7 @@
         </section>
         <section>
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-sm-10">
                     <h2><small>Hours</small></h2>
                     <div class="table-responsive">
                         <table class="table table-condensed table-small">

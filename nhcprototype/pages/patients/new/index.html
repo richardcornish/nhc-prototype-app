@@ -7,7 +7,7 @@
 
         <nav>
             <ul class="pager pager-sm">
-                <li class="previous"><a href="{% url '/patients/index.html' %}"><span aria-hidden="true">&larr;</span> Back to patients</a></li>
+                <li class="previous"><a href="{% url '/patients/index.html' %}"><span class="glyphicon glyphicon-chevron-left"></span> Back to patients</a></li>
             </ul>
         </nav>
 
@@ -52,8 +52,8 @@
                 </div>
             </section>
             <section>
-                <p class="pull-left"><a href="{% url '/patients/index.html' %}" class="btn btn-default btn-space">Cancel</a></p>
-                <p class="pull-right"><a href="{% url '/patients/don-draper/index.html' %}" class="btn btn-success btn-space">Add patient</a></p>
+                <p class="pull-left"><a href="{% url '/patients/index.html' %}" class="btn btn-default">Cancel</a></p>
+                <p class="pull-right"><a href="{% url '/patients/don-draper/index.html' %}" class="btn btn-success">Add patient</a></p>
             </section>
         </form>
 

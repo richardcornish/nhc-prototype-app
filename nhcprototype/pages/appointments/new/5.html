@@ -2,25 +2,26 @@
 
 {% block wizard_nav %}
 <li><a href="{% url '/appointments/new/1.html' %}">Patient</a></li>
-<li><a href="{% url '/appointments/new/2.html' %}">Procedure</a></li>
-<li><a href="{% url '/appointments/new/3.html' %}">Insurance</a></li>
-<li><a href="{% url '/appointments/new/4.html' %}">RQI</a></li>
+<li><a href="{% url '/appointments/new/2.html' %}">Insurance</a></li>
+<li><a href="{% url '/appointments/new/3.html' %}">Procedure</a></li>
+<li><a href="{% url '/appointments/new/4.html' %}">Provider</a></li>
 <li><a href="{% url '/appointments/new/5.html' %}" class="active">Preauthorization</a></li>
-<li><a href="{% url '/appointments/new/6.html' %}">Provider</a></li>
 {% endblock %}
 
 {% block wizard_form %}
 <form action="" method="post">
     <section>
-        <p>?</p>
+        <p>Coming soon.</p>
     </section>
     <section>
-        <nav>
-            <ul class="pager pager-sm">
-                <li class="previous"><a href="{% url '/appointments/new/4.html' %}"><span aria-hidden="true">&larr;</span> RQI</a></li>
-                <li class="next"><a href="{% url '/appointments/new/6.html' %}">Provider <span aria-hidden="true">&rarr;</span></a></li>
-            </ul>
-        </nav>
+        <div class="clearfix">
+            <p class="pull-right"><a href="{% url '/appointments/12345/index-success.html' %}" class="btn btn-success">Schedule appointment</a></p>
+            <nav>
+                <ul class="pager pager-sm">
+                    <li class="previous"><a href="{% url '/appointments/new/5.html' %}"><span class="glyphicon glyphicon-chevron-right"></span> Provider</a></li>
+                </ul>
+            </nav>
+        </div>
     </section>
 </form>
 {% endblock %}
