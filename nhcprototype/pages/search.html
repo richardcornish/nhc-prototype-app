@@ -10,7 +10,7 @@
         <h1><small>Search</small></h1>
 
         <section>
-            <h2><small>Appointments</small></h2>
+            <h2><small><a href="{% url '/appointments/index.html' %}">Appointments</a></small></h2>
             <div class="table-responsive">
                 <table class="table table-condensed table-row-link">
                     <thead>
@@ -64,7 +64,7 @@
         </section>
 
         <section>
-            <h2><small>Patients</small></h2>
+            <h2><small><a href="{% url '/patients/index.html' %}">Patients</a></small></h2>
             <div class="table-responsive">
                 <table class="table table-condensed table-row-link">
                     <thead>
@@ -118,7 +118,7 @@
         </section>
 
         <section>
-            <h2><small>Providers</small></h2>
+            <h2><small><a href="{% url '/providers/index.html' %}">Providers</a></small></h2>
             <div class="table-responsive">
                 <table class="table table-condensed table-row-link">
                     <thead>
@@ -169,6 +169,7 @@
                     </tbody>
                 </table>
             </div>
+            <p><small>Are we missing a doctor or clinic? <a href="{% url '/providers/new/index.html' %}">Let us know</a> and we'll look into it.</small></p>
         </section>
 
     </div>

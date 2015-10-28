@@ -20,12 +20,13 @@
 
             <div class="navbar-collapse collapse">
                 <div class="col-sm-6">
-                    <form class="navbar-form navbar-left" action="{% url '/search.html' %}">
+                    <form class="navbar-form navbar-left" action="{% url '/search.html' %}" method="get">
                         <label for="query" class="sr-only">Query</label>
-                        <div class="form-group">
-                            <input type="search" class="form-control" placeholder="Search appointments or patients..." id="query" {% block autofocus %}{% endblock %}>
+                            <div class="right-inner-addon">
+                                <span class="glyphicon glyphicon-search"></span>
+                                <input type="search" class="form-control" placeholder="Search appointments or patients..." id="query" {% block autofocus %}{% endblock %}>
+                            </div>
                             <button type="submit" class="btn btn-default sr-only">Search</button>
-                        </div>
                         {% comment %}
                         {# For adjacent button #}
                         <div class="input-group">
@@ -62,7 +63,7 @@
                     <li><a href="{% url '/appointments/index.html' %}">Appointments</a></li>
                     <li><a href="{% url '/patients/index.html' %}">Patients</a></li>
                     <li><a href="{% url '/providers/index.html' %}">Providers</a></li>
-                    <li><a href="{% url '/settings/practice.html' %}">Settings</a></li>
+                    <li><a href="{% url '/settings/facility.html' %}">Settings</a></li>
                 </ul>
             </section>
         </div>
@@ -73,7 +74,7 @@
 {% block footer %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10 col-md-offset-2">
 
             <section>
                 <p><small>&copy; {% now "Y" %} <a href="{% url '/dashboard.html' %}">Next Health Choice</a>. <a href="{% url '/support.html' %}">Support</a>. <a href="{% url '/index.html' %}">Log out</a>. </small></p>

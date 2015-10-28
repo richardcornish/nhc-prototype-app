@@ -17,7 +17,11 @@
             <p><small>(630) 717-3700<br><a href="https://www.google.com/maps/?q=1888+Bay+Scott+Cir,+Naperville,+IL+60540">1888 Bay Scott Cir, Naperville, IL 60540</a><br><a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
         </section>
         <section>
-            <p><a class="btn btn-success btn-sm btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm" href="{% url '/providers/12345/edit.html' %}">Edit provider</a></p>
+            <p>
+                <a class="btn btn-success btn-sm btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Appointment</a>
+                <a class="btn btn-danger btn-sm btn-danger-outline" href="{% url '/providers/12345/index.html' %}"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;Favorite</a>
+                <a class="btn btn-danger btn-sm" href="{% url '/providers/12345/index.html' %}"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;Unfavorite</a>
+            </p>
         </section>
 
         <section>
@@ -81,13 +85,6 @@
                 <div class="pull-right">
                     <ul class="pager pager-sm">
                         <li class="next"><a href="#">Next <span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                    </ul>
-                </div>
-                <div class="text-center">
-                    <ul class="pagination pagination-sm">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
                     </ul>
                 </div>
             </nav>

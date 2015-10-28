@@ -22,6 +22,9 @@
         });
     });
 
+    // Chosen select widget
+    $('.form-control-chosen').chosen();
+
 })(jQuery);
 
 

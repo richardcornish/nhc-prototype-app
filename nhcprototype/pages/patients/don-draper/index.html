@@ -20,7 +20,10 @@
             <p><small>(212) 555-0112<br><a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a><br>6/1/1926</small></p>
         </section>
         <section>
-            <p><a class="btn btn-success btn-sm btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Create appointment</a> <a class="btn btn-default btn-sm" href="{% url '/patients/don-draper/edit/general.html' %}">Edit patient</a></p>
+            <p>
+                <a class="btn btn-success btn-sm btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Appointment</a>
+                <a class="btn btn-default btn-sm" href="{% url '/patients/don-draper/edit/general.html' %}">Edit patient</a>
+            </p>
         </section>
 
     </div>
@@ -130,13 +133,6 @@
                 <div class="pull-right">
                     <ul class="pager pager-sm">
                         <li class="next"><a href="#">Next <span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                    </ul>
-                </div>
-                <div class="text-center">
-                    <ul class="pagination pagination-sm">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
                     </ul>
                 </div>
             </nav>

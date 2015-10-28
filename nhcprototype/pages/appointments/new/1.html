@@ -1,52 +1,80 @@
 {% extends "appointments/new/wizard.html" %}
 
-{% block wizard_nav %}
-<li><a href="{% url '/appointments/new/1.html' %}" class="active">Patient</a></li>
-<li><a href="{% url '/appointments/new/2.html' %}">Insurance</a></li>
-<li><a href="{% url '/appointments/new/3.html' %}">Procedure</a></li>
-<li><a href="{% url '/appointments/new/4.html' %}">Provider</a></li>
-<li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
-{% endblock %}
-
 {% block wizard_form %}
-<form action="" method="post">
-    <section>
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="form-group">
-                    <label for="first-name">First name</label>
-                    <input type="text" class="form-control" id="first-name" placeholder="" autofocus="autofocus">
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last name</label>
-                    <input type="text" class="form-control" id="last-name" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="date-of-birth">Date of birth</label>
-                    <div class="input-group date" data-widget="date-dob">
-                        <input type="text" class="form-control" id="date-of-birth" placeholder="mm/dd/yyyy">
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555" data-widget="phone">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="">
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="{% url '/appointments/new/1.html' %}" class="active">Patient</a></li>
+    <li><a href="{% url '/appointments/new/2.html' %}">Insurance</a></li>
+    <li><a href="{% url '/appointments/new/3.html' %}">Procedure</a></li>
+    <li><a href="{% url '/appointments/new/4.html' %}">Provider</a></li>
+    <li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
+</ul>
+
+<div class="form-group">
+    <select data-placeholder="Select an existing patient..." class="form-control form-control-chosen">
+        <option value=""></option>
+        <option value="1">Pete Campbell</option>
+        <option value="2">Don Draper</option>
+        <option value="3">Betty Francis</option>
+        <option value="4">Joan Harris</option>
+        <option value="5">Peggy Olson</option>
+        <option value="6">Roger Sterling</option>
+    </select>
+</div>
+
+<p>Or</p>
+
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#patient"><span class="glyphicon glyphicon-plus"></span> New patient</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="patient" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New patient</h4>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" class="form-control" id="first-name" placeholder="" autofocus="autofocus">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input type="text" class="form-control" id="last-name" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="date-of-birth">Date of birth</label>
+                <div class="input-group date" data-widget="date-dob">
+                    <input type="text" class="form-control" id="date-of-birth" placeholder="mm/dd/yyyy">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
                 </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <nav>
-            <ul class="pager pager-sm">
-                <li class="next"><a href="{% url '/appointments/new/2.html' %}">Procedure <span class="glyphicon glyphicon-chevron-right"></span></a></li>
-            </ul>
-        </nav>
-    </section>
-</form>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="(555) 555-5555" data-widget="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Add patient</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <nav>
+        <ul class="pager pager-sm">
+            <li class="next"><a href="{% url '/appointments/new/2.html' %}">Insurance <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+        </ul>
+    </nav>
 {% endblock %}

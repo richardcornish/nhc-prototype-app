@@ -5,9 +5,12 @@
 <div class="row">
     <div class="col-md-10">
 
-        <h1><small>Providers <a href="{% url '/providers/new/index.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Add provider</a></small></h1>
+        <h1><small>Providers <a href="{% url '/providers/new/index.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Submit provider</a></small></h1>
 
         <nav>
+            <ul class="pagination pagination-sm">
+                <li><a href="{% url '/providers/index.html' %}"><span class="glyphicon glyphicon-heart"></span></a></li>
+            </ul>
             <ul class="pagination pagination-sm">
                 <li><a href="{% url '/providers/n.html' %}">A</a></li>
                 <li><a href="{% url '/providers/n.html' %}">B</a></li>
@@ -38,6 +41,8 @@
             </ul>
         </nav>
 
+        <h2><small>N</small></h2>
+
         <div class="table-responsive">
             <table class="table table-condensed table-row-link">
                 <thead>
@@ -58,20 +63,18 @@
                 </tbody>
             </table>
         </div>
-        <div class="clearfix">
-            <nav class="pull-right">
-                <ul class="pagination pagination-sm">
-                    <li><a href="#">Next <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+        <nav class="clearfix">
+            <div class="pull-left">
+                <ul class="pager pager-sm">
+                    <li class="previous"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span> Previous</a></li>
                 </ul>
-            </nav>
-            <nav class="text-center">
-                <ul class="pagination pagination-sm">
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+            </div>
+            <div class="pull-right">
+                <ul class="pager pager-sm">
+                    <li class="next"><a href="#">Next <span class="glyphicon glyphicon-chevron-right"></span></a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
     </div>
 </div>

@@ -1,14 +1,15 @@
 {% extends "appointments/new/wizard.html" %}
 
-{% block wizard_nav %}
-<li><a href="{% url '/appointments/new/1.html' %}">Patient</a></li>
-<li><a href="{% url '/appointments/new/2.html' %}" class="active">Insurance</a></li>
-<li><a href="{% url '/appointments/new/3.html' %}">Procedure</a></li>
-<li><a href="{% url '/appointments/new/4.html' %}">Provider</a></li>
-<li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
-{% endblock %}
-
 {% block wizard_form %}
+
+<ul class="nav nav-tabs">
+    <li><a href="{% url '/appointments/new/1.html' %}" class="active">Patient</a></li>
+    <li class="active"><a href="{% url '/appointments/new/2.html' %}">Insurance</a></li>
+    <li><a href="{% url '/appointments/new/3.html' %}">Procedure</a></li>
+    <li><a href="{% url '/appointments/new/4.html' %}">Provider</a></li>
+    <li><a href="{% url '/appointments/new/5.html' %}">Preauthorization</a></li>
+</ul>
+
 <form action="" method="post">
     <section>
         <h2><small>Card info</small></h2>
@@ -76,7 +77,7 @@
                         <option value="GA">Georgia</option>
                         <option value="HI">Hawaii</option>
                         <option value="ID">Idaho</option>
-                        <option value="IL" selected>Illinois</option>
+                        <option value="IL" selected="selected">Illinois</option>
                         <option value="IN">Indiana</option>
                         <option value="IA">Iowa</option>
                         <option value="KS">Kansas</option>
