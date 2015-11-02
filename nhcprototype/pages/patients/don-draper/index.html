@@ -11,30 +11,18 @@
             </ul>
         </nav>
 
-    </div>
-    <div class="col-sm-9">
-
         <h1><small>Don Draper</small></h1>
 
         <section>
             <p><small>(212) 555-0112<br><a href="mailto:don@sterlingcooper.com">don@sterlingcooper.com</a><br>6/1/1926</small></p>
         </section>
+
         <section>
             <p>
                 <a class="btn btn-success btn-sm btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Appointment</a>
                 <a class="btn btn-default btn-sm" href="{% url '/patients/don-draper/edit/general.html' %}">Edit patient</a>
             </p>
         </section>
-
-    </div>
-    <div class="col-sm-2">
-        
-        <img src="{% static '/static/images/patient.png' %}" class="img-responsive img-circle center-block img-avatar">
-
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
 
         <section>
             <h2><small>Appointments</small></h2>

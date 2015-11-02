@@ -1,0 +1,59 @@
+{% extends "logged_in.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-8">
+
+        <h1><small>Settings</small></h1>
+
+        <ul class="nav nav-tabs">
+            <li><a href="{% url '/settings/facility.html' %}">Facility</a></li>
+            <li class="active"><a href="{% url '/settings/orderers/index.html' %}">Orderers</a></li>
+            <li><a href="{% url '/settings/account.html' %}">Account</a></li>
+            <li><a href="{% url '/settings/password.html' %}">Password</a></li>
+        </ul>
+
+        <section>
+            <div class="table-responsive">
+                <table class="table table-condensed table-row-link">
+                    <thead>
+                        <tr>
+                            <th>Last name</th>
+                            <th>First name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="{% url '/settings/orderers/don-draper/edit.html' %}">Campbell</a></td>
+                            <td>Pete</td>
+                            <td>(212) 555-0112</td>
+                            <td>pete@scdp.com</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/settings/orderers/don-draper/edit.html' %}">Draper</a></td>
+                            <td>Don</td>
+                            <td>(212) 555-0112</td>
+                            <td>don@scdp.com</td>
+                        </tr>
+                        <tr>
+                            <td><a href="{% url '/settings/orderers/don-draper/edit.html' %}">Francis</a></td>
+                            <td>Betty</td>
+                            <td>(212) 555-0112</td>
+                            <td>betty@scdp.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="text-right">
+            <a href="{% url '/settings/orderers/new.html' %}" class="btn btn-success btn-sm btn-success-outline"><span class="glyphicon glyphicon-plus"></span> Submit orderer</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

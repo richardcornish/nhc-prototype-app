@@ -9,6 +9,7 @@
 
         <ul class="nav nav-tabs">
             <li class="active"><a href="{% url '/settings/facility.html' %}">Facility</a></li>
+            <li><a href="{% url '/settings/orderers/index.html' %}">Orderers</a></li>
             <li><a href="{% url '/settings/account.html' %}">Account</a></li>
             <li><a href="{% url '/settings/password.html' %}">Password</a></li>
         </ul>
@@ -132,7 +133,6 @@
                 </div>
             </section>
             <section>
-                <h2><small>&nbsp;</small></h2>
                 <p class="pull-left"><a href="{% url '/dashboard.html' %}" class="btn btn-default">Cancel</a></p>
                 <p class="pull-right"><a href="{% url '/settings/facility.html' %}" class="btn btn-success">Save changes</a></p>
             </section>

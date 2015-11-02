@@ -25,14 +25,13 @@
     // Chosen select widget
     $('.form-control-chosen').chosen();
 
+    // Favorite button
+    $('[data-favorite-text]').on('click', function () {
+        if ($(this).hasClass('active')) {
+            $(this).button('favorite');
+        } else {
+            $(this).button('unfavorite');
+        }
+    });
+
 })(jQuery);
-
-
-(function($, FieldKit){
-
-    // Format phone inputs
-    if ($('[data-widget="phone"]').length) {
-        new FieldKit.TextField($('[data-widget="phone"]').get(0), new FieldKit.PhoneFormatter());
-    }
-
-})(jQuery, FieldKit);

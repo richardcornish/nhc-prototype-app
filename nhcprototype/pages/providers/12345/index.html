@@ -14,13 +14,13 @@
         <h1><small>Naperville Imaging Center</small></h1>
 
         <section>
-            <p><small>(630) 717-3700<br><a href="https://www.google.com/maps/?q=1888+Bay+Scott+Cir,+Naperville,+IL+60540">1888 Bay Scott Cir, Naperville, IL 60540</a><br><a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
+            <p><small>NPI: 1164614772<br>(630) 717-3700<br><a href="https://www.google.com/maps/?q=1888+Bay+Scott+Cir,+Naperville,+IL+60540">1888 Bay Scott Cir, Naperville, IL 60540</a><br><a href="http://www.napervillemri.com/">napervillemri.com</a></small></p>
         </section>
+
         <section>
             <p>
                 <a class="btn btn-success btn-sm btn-success-outline" href="{% url '/appointments/new/1.html' %}"><span class="glyphicon glyphicon-plus"></span> Appointment</a>
-                <a class="btn btn-danger btn-sm btn-danger-outline" href="{% url '/providers/12345/index.html' %}"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;Favorite</a>
-                <a class="btn btn-danger btn-sm" href="{% url '/providers/12345/index.html' %}"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;Unfavorite</a>
+                <button type="button" class="btn btn-danger btn-sm btn-danger-outline" href="{% url '/providers/12345/index.html' %}" data-toggle="button" data-favorite-text="&lt;span class=&quot;glyphicon glyphicon-heart&quot;&gt;&lt;/span&gt; Favorite" data-unfavorite-text="&lt;span class=&quot;glyphicon glyphicon-heart&quot;&gt;&lt;/span&gt; Unfavorite" autocomplete="off"><span class="glyphicon glyphicon-heart"></span> Favorite</button>
             </p>
         </section>
 
