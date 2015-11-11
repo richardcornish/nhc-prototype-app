@@ -10,7 +10,7 @@ Prototype for Next Health Choice web application for orderers. Deployed on S3.
 mkvirtualenv nhc-prototype-app
 git clone git@github.com:Zavteq/nhc-prototype-app.git
 cd nhc-prototype-app/
-pip install requirements.txt
+pip install -r requirements.txt
 cd nhcprototype/
 cactus build
 cactus serve
