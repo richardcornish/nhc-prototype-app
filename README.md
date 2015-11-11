@@ -2,7 +2,7 @@
 
 Prototype for Next Health Choice web application for orderers. Deployed on S3.
 
-[http://nhcprototype.s3-website-us-east-1.amazonaws.com](http://nhcprototype.s3-website-us-east-1.amazonaws.com/)
+[http://nhcapp.s3-website-us-east-1.amazonaws.com](http://nhcapp.s3-website-us-east-1.amazonaws.com/)
 
 ## Install
 

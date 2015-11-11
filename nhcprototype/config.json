@@ -1,6 +1,6 @@
 {
     "aws-access-key": "AKIAIXIGX5WDE7O35CLQ",
-    "aws-bucket-name": "nhcprototype",
-    "aws-bucket-website": "nhcprototype.s3-website-us-east-1.amazonaws.com",
+    "aws-bucket-name": "nhcapp",
+    "aws-bucket-website": "nhcapp.s3-website-us-east-1.amazonaws.com",
     "prettify": true
 }
